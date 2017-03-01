@@ -1,0 +1,11 @@
+name: telegram_bot
+
+port: :9087
+token: 198742259:AAFs-UGFKn0w6vSgYjUZC7nZZLyKSG2S0Hw
+
+chats:
+ - name: helena
+   id: 209051188
+
+ - name: kirill
+   id: 278296224

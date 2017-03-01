@@ -1,0 +1,1721 @@
+{
+  "id": 18,
+  "title": "QRTech",
+  "tags": [],
+  "style": "dark",
+  "timezone": "browser",
+  "editable": true,
+  "hideControls": false,
+  "sharedCrosshair": false,
+  "rows": [
+    {
+      "collapse": false,
+      "editable": true,
+      "height": "250px",
+      "panels": [
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": true,
+          "colors": [
+            "rgba(50, 172, 45, 0.97)",
+            "rgba(107, 237, 40, 0.89)",
+            "rgba(245, 54, 54, 0.9)"
+          ],
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "format": "short",
+          "gauge": {
+            "maxValue": 1,
+            "minValue": 0,
+            "show": true,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "id": 9,
+          "interval": null,
+          "isNew": true,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 5,
+          "sparkline": {
+            "fillColor": "rgba(92, 68, 54, 0.18)",
+            "full": true,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": true
+          },
+          "targets": [
+            {
+              "expr": "qrtech_mt_errors",
+              "intervalFactor": 2,
+              "metric": "qrtech_mt_errors",
+              "refId": "A",
+              "step": 240
+            }
+          ],
+          "thresholds": "1",
+          "title": "MT API OK",
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [],
+          "valueName": "current"
+        }
+      ],
+      "title": "New row"
+    },
+    {
+      "collapse": false,
+      "editable": true,
+      "height": "250px",
+      "panels": [
+        {
+          "aliasColors": {
+            "ais": "#3F6833",
+            "ais errors": "#890F02",
+            "dtac": "#B7DBAB",
+            "dtac errors": "#BF1B00",
+            "trueh": "#5195CE",
+            "trueh errors": "#58140C"
+          },
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 1,
+          "isNew": true,
+          "legend": {
+            "avg": false,
+            "current": true,
+            "hideEmpty": true,
+            "hideZero": true,
+            "max": true,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 4,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "qrtech_ais_success",
+              "intervalFactor": 2,
+              "legendFormat": "ais",
+              "metric": "qrtech_ais_success",
+              "refId": "A",
+              "step": 40
+            },
+            {
+              "expr": "qrtech_ais_errors",
+              "intervalFactor": 2,
+              "legendFormat": "ais errors",
+              "metric": "qrtech_ais_errors",
+              "refId": "D",
+              "step": 40
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "AIS",
+          "tooltip": {
+            "msResolution": false,
+            "shared": true,
+            "sort": 0,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "xaxis": {
+            "show": true
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {
+            "ais": "#3F6833",
+            "ais errors": "#890F02",
+            "dtac": "#508642",
+            "dtac errors": "#BF1B00",
+            "trueh": "#5195CE",
+            "trueh errors": "#58140C"
+          },
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 2,
+          "isNew": true,
+          "legend": {
+            "avg": false,
+            "current": true,
+            "hideEmpty": true,
+            "hideZero": true,
+            "max": true,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 4,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "qrtech_dtac_success",
+              "intervalFactor": 2,
+              "legendFormat": "dtac",
+              "metric": "qrtech_dtac_success",
+              "refId": "B",
+              "step": 40
+            },
+            {
+              "expr": "qrtech_dtac_errors",
+              "intervalFactor": 2,
+              "legendFormat": "dtac errors",
+              "metric": "qrtech_dtac_errors",
+              "refId": "E",
+              "step": 40
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "DTAC",
+          "tooltip": {
+            "msResolution": false,
+            "shared": true,
+            "sort": 0,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "xaxis": {
+            "show": true
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {
+            "ais": "#3F6833",
+            "ais errors": "#890F02",
+            "dtac": "#B7DBAB",
+            "dtac errors": "#BF1B00",
+            "trueh": "#508642",
+            "trueh errors": "#58140C"
+          },
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 3,
+          "isNew": true,
+          "legend": {
+            "avg": false,
+            "current": true,
+            "hideEmpty": true,
+            "hideZero": true,
+            "max": true,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 4,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "qrtech_trueh_success",
+              "intervalFactor": 2,
+              "legendFormat": "trueh",
+              "metric": "qrtech_trueh_success",
+              "refId": "C",
+              "step": 40
+            },
+            {
+              "expr": "qrtech_trueh_errors",
+              "intervalFactor": 2,
+              "legendFormat": "trueh errors",
+              "metric": "qrtech_trueh_errors",
+              "refId": "F",
+              "step": 40
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "TRUEH",
+          "tooltip": {
+            "msResolution": false,
+            "shared": true,
+            "sort": 0,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "xaxis": {
+            "show": true
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {
+            "absent parameters": "#BF1B00",
+            "errors": "#BF1B00",
+            "errors{group=\"qrtech\",instance=\"52.220.98.67:50306\",job=\"qrtech-telco\",name=\"qrtech\"}": "#BF1B00",
+            "parse time erros": "#6ED0E0",
+            "telco_404_page_not_found{group=\"qrtech\",instance=\"52.220.98.67:50306\",job=\"qrtech-telco\",name=\"qrtech\"}": "#EF843C",
+            "telco_adsent_parameter{group=\"qrtech\",instance=\"52.220.98.67:50306\",job=\"qrtech-telco\",name=\"qrtech\"}": "#CCA300",
+            "telco_mo_parse_time_errors{group=\"qrtech\",instance=\"52.220.98.67:50306\",job=\"qrtech-telco\",name=\"qrtech\"}": "#E24D42",
+            "telco_mo_wrong_service_key{group=\"qrtech\",instance=\"52.220.98.67:50306\",job=\"qrtech-telco\",name=\"qrtech\"}": "#BF1B00",
+            "telco_notify_errors{group=\"qrtech\",instance=\"52.220.98.67:50306\",job=\"qrtech-telco\",name=\"qrtech\"}": "#BF1B00",
+            "telco_unknown_operator{group=\"qrtech\",instance=\"52.220.98.67:50306\",job=\"qrtech-telco\",name=\"qrtech\"}": "#BF1B00",
+            "unknown operator": "#BF1B00",
+            "wrong service key": "#BF1B00"
+          },
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 4,
+          "isNew": true,
+          "legend": {
+            "avg": false,
+            "current": true,
+            "hideEmpty": true,
+            "hideZero": true,
+            "max": true,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 12,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "success{group=\"qrtech\", job=\"qrtech\"}",
+              "intervalFactor": 2,
+              "legendFormat": "success",
+              "metric": "success",
+              "refId": "A",
+              "step": 20
+            },
+            {
+              "expr": "errors{group=\"qrtech\", job=\"qrtech-telco\"}",
+              "intervalFactor": 2,
+              "legendFormat": "errors",
+              "metric": "errors",
+              "refId": "B",
+              "step": 20
+            },
+            {
+              "expr": "qrtech_adsent_parameter{group=\"qrtech\"}",
+              "interval": "",
+              "intervalFactor": 2,
+              "legendFormat": "absent parameters",
+              "metric": "qrtech_adsent_parameter",
+              "refId": "C",
+              "step": 20
+            },
+            {
+              "expr": "qrtech_404_page_not_found{group=\"qrtech\"}",
+              "intervalFactor": 2,
+              "legendFormat": "404 page",
+              "metric": "qrtech_404_page_not_found",
+              "refId": "D",
+              "step": 20
+            },
+            {
+              "expr": "dropped{group=\"qrtech\"}",
+              "intervalFactor": 2,
+              "legendFormat": "dropped",
+              "metric": "dropped",
+              "refId": "E",
+              "step": 20
+            },
+            {
+              "expr": "empty{group=\"qrtech\"}",
+              "intervalFactor": 2,
+              "legendFormat": "empty",
+              "metric": "empty",
+              "refId": "F",
+              "step": 20
+            },
+            {
+              "expr": "qrtech_notify_errors{group=\"qrtech\"}",
+              "intervalFactor": 2,
+              "legendFormat": "notify errors",
+              "metric": "qrtech_notify_errors",
+              "refId": "G",
+              "step": 20
+            },
+            {
+              "expr": "qrtech_mo_parse_time_errors{group=\"qrtech\"}",
+              "intervalFactor": 2,
+              "legendFormat": "parse time erros",
+              "metric": "qrtech_mo_parse_time_errors",
+              "refId": "H",
+              "step": 20
+            },
+            {
+              "expr": "qrtech_mo_wrong_service_key{group=\"qrtech\"}",
+              "interval": "",
+              "intervalFactor": 2,
+              "legendFormat": "wrong service key",
+              "metric": "qrtech_mo_wrong_service_key",
+              "refId": "I",
+              "step": 20
+            },
+            {
+              "expr": "qrtech_unknown_operator{group=\"qrtech\"}",
+              "intervalFactor": 2,
+              "legendFormat": "unknown operator",
+              "metric": "qrtech_unknown_operator",
+              "refId": "J",
+              "step": 20
+            },
+            {
+              "expr": "qrtech_unauthorized",
+              "intervalFactor": 2,
+              "metric": "qrtech_unauthorized",
+              "refId": "K",
+              "step": 20
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Incoming Traffic Okayness",
+          "tooltip": {
+            "msResolution": false,
+            "shared": true,
+            "sort": 0,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "xaxis": {
+            "show": true
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        }
+      ],
+      "title": "Row"
+    },
+    {
+      "collapse": false,
+      "editable": true,
+      "height": "250px",
+      "panels": [
+        {
+          "aliasColors": {
+            "add new mo": "#7EB26D",
+            "mo dropped": "#BF1B00",
+            "mo erorrs": "#BF1B00",
+            "unsubscribe": "#6ED0E0"
+          },
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 5,
+          "isNew": true,
+          "legend": {
+            "avg": false,
+            "current": true,
+            "hideEmpty": true,
+            "hideZero": true,
+            "max": true,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "mt_manager_qrtech_mo_dropped",
+              "intervalFactor": 2,
+              "legendFormat": "mo dropped",
+              "metric": "mt_manager_qrtech_mo_dropped",
+              "refId": "A",
+              "step": 30
+            },
+            {
+              "expr": "mt_manager_qrtech_add_to_db_success",
+              "intervalFactor": 2,
+              "legendFormat": "add new mo",
+              "metric": "mt_manager_qrtech_add_to_db_success",
+              "refId": "B",
+              "step": 30
+            },
+            {
+              "expr": "mt_manager_qrtech_add_to_db_errors",
+              "intervalFactor": 2,
+              "legendFormat": "mo erorrs",
+              "metric": "mt_manager_qrtech_add_to_db_errors",
+              "refId": "C",
+              "step": 30
+            },
+            {
+              "expr": "warnings{group=\"qrtech\"}",
+              "intervalFactor": 2,
+              "legendFormat": "warnings",
+              "metric": "warnings",
+              "refId": "D",
+              "step": 30
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "New MO (mt manager)",
+          "tooltip": {
+            "msResolution": false,
+            "shared": true,
+            "sort": 0,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "xaxis": {
+            "show": true
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {
+            "add new mo": "#7EB26D",
+            "dn successs": "#7EB26D",
+            "mo dropped": "#BF1B00",
+            "mo erorrs": "#BF1B00",
+            "unsubscribe": "#6ED0E0"
+          },
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 10,
+          "isNew": true,
+          "legend": {
+            "avg": false,
+            "current": true,
+            "hideEmpty": true,
+            "hideZero": true,
+            "max": true,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "mt_manager_qrtech_dn_dropped",
+              "intervalFactor": 2,
+              "legendFormat": "dn dropped",
+              "metric": "mt_manager_qrtech_dn_dropped",
+              "refId": "A",
+              "step": 30
+            },
+            {
+              "expr": "mt_manager_qrtech_dn_errors",
+              "intervalFactor": 2,
+              "legendFormat": "dn errors",
+              "metric": "mt_manager_qrtech_dn_errors",
+              "refId": "B",
+              "step": 30
+            },
+            {
+              "expr": "mt_manager_qrtech_dn_success",
+              "intervalFactor": 2,
+              "legendFormat": "dn successs",
+              "metric": "mt_manager_qrtech_dn_success",
+              "refId": "C",
+              "step": 30
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "DN (mt manager)",
+          "tooltip": {
+            "msResolution": false,
+            "shared": true,
+            "sort": 0,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "xaxis": {
+            "show": true
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        }
+      ],
+      "title": "New row"
+    },
+    {
+      "collapse": false,
+      "editable": true,
+      "height": "250px",
+      "panels": [
+        {
+          "aliasColors": {
+            "incoming": "#508642"
+          },
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 7,
+          "isNew": true,
+          "legend": {
+            "avg": false,
+            "current": true,
+            "hideEmpty": true,
+            "hideZero": true,
+            "max": true,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 12,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "dispatcherd_campaign_access{group=\"qrtech\"}",
+              "intervalFactor": 2,
+              "legendFormat": "access campaign",
+              "metric": "dispatcherd_campaign_access",
+              "refId": "A",
+              "step": 20
+            },
+            {
+              "expr": "dispatcherd_error404{group=\"qrtech\"}",
+              "intervalFactor": 2,
+              "legendFormat": "404 error",
+              "metric": "dispatcherd_error404",
+              "refId": "B",
+              "step": 20
+            },
+            {
+              "expr": "dispatcherd_incoming{group=\"qrtech\"}",
+              "intervalFactor": 2,
+              "legendFormat": "incoming",
+              "metric": "dispatcherd_incoming",
+              "refId": "C",
+              "step": 20
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Dispatcher",
+          "tooltip": {
+            "msResolution": false,
+            "shared": true,
+            "sort": 0,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "xaxis": {
+            "show": true
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        }
+      ],
+      "title": "New row"
+    },
+    {
+      "collapse": false,
+      "editable": true,
+      "height": "250px",
+      "panels": [
+        {
+          "aliasColors": {
+            "buffered  empty": "#890F02",
+            "buffered  errors": "#890F02",
+            "buffered  success": "#B7DBAB",
+            "buffered dropped": "#890F02",
+            "buffered not found": "#E5A8E2",
+            "dropped": "#C15C17",
+            "errors": "#890F02",
+            "not found": "#6ED0E0",
+            "pixels dropped": "#890F02",
+            "pixels_dropped{group=\"qrtech\",instance=\"52.220.98.67:50309\",job=\"qrtech-pixels\",name=\"pixels\"}": "#EAB839",
+            "publisher error": "#EF843C",
+            "success": "#7EB26D"
+          },
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 8,
+          "isNew": true,
+          "legend": {
+            "avg": false,
+            "current": true,
+            "hideEmpty": true,
+            "hideZero": true,
+            "max": true,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 12,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "qrtech_dn_mt_successful",
+              "intervalFactor": 2,
+              "legendFormat": "mt",
+              "metric": "qrtech_dn_mt_successful",
+              "refId": "A",
+              "step": 20
+            },
+            {
+              "expr": "qrtech_dn_mt_sent_to_queue_successfully",
+              "intervalFactor": 2,
+              "metric": "qrtech_dn_mt_sent_to_queue_successfully",
+              "refId": "B",
+              "step": 20
+            },
+            {
+              "expr": "qrtech_dn_mt_rejected",
+              "intervalFactor": 2,
+              "metric": "qrtech_dn_mt_rejected",
+              "refId": "C",
+              "step": 20
+            },
+            {
+              "expr": "qrtech_dn_mt_message_format_error",
+              "intervalFactor": 2,
+              "metric": "qrtech_dn_mt_message_format_error",
+              "refId": "D",
+              "step": 20
+            },
+            {
+              "expr": "qrtech_dn_subscriber_unknown",
+              "intervalFactor": 2,
+              "metric": "qrtech_dn_subscriber_unknown",
+              "refId": "E",
+              "step": 20
+            },
+            {
+              "expr": "qrtech_dn_subscriber_error",
+              "intervalFactor": 2,
+              "metric": "qrtech_dn_subscriber_error",
+              "refId": "F",
+              "step": 20
+            },
+            {
+              "expr": "qrtech_dn_subscriber_barred",
+              "intervalFactor": 2,
+              "metric": "qrtech_dn_subscriber_barred",
+              "refId": "G",
+              "step": 20
+            },
+            {
+              "expr": "qrtech_dn_operator_failure",
+              "intervalFactor": 2,
+              "metric": "qrtech_dn_operator_failure",
+              "refId": "H",
+              "step": 20
+            },
+            {
+              "expr": "qrtech_dn_operator_congestion",
+              "intervalFactor": 2,
+              "metric": "qrtech_dn_operator_congestion",
+              "refId": "I",
+              "step": 20
+            },
+            {
+              "expr": "qrtech_dn_charge_error",
+              "intervalFactor": 2,
+              "metric": "qrtech_dn_charge_error",
+              "refId": "J",
+              "step": 20
+            },
+            {
+              "expr": "qrtech_dn_subscriber_not_enough_balance",
+              "intervalFactor": 2,
+              "metric": "qrtech_dn_subscriber_not_enough_balance",
+              "refId": "K",
+              "step": 20
+            },
+            {
+              "expr": "qrtech_dn_subscriber_exceeded_frequency",
+              "intervalFactor": 2,
+              "metric": "qrtech_dn_subscriber_exceeded_frequency",
+              "refId": "L",
+              "step": 20
+            },
+            {
+              "expr": "qrtech_dn_other_error",
+              "intervalFactor": 2,
+              "metric": "qrtech_dn_other_error",
+              "refId": "M",
+              "step": 20
+            },
+            {
+              "expr": "qrtech_dn_unknown_code",
+              "intervalFactor": 2,
+              "metric": "qrtech_dn_unknown_code",
+              "refId": "N",
+              "step": 20
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "API Delivery Notifications",
+          "tooltip": {
+            "msResolution": false,
+            "shared": true,
+            "sort": 0,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "xaxis": {
+            "show": true
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        }
+      ],
+      "title": "New row"
+    },
+    {
+      "collapse": false,
+      "editable": true,
+      "height": "250px",
+      "panels": [
+        {
+          "aliasColors": {
+            "errors": "#BF1B00",
+            "success": "#7EB26D"
+          },
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 6,
+          "isNew": true,
+          "legend": {
+            "avg": false,
+            "current": true,
+            "hideEmpty": true,
+            "hideZero": true,
+            "max": true,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "qlistener_operator_add_to_db_errors{group=\"qrtech\"}",
+              "intervalFactor": 2,
+              "legendFormat": "errors",
+              "metric": "qlistener_operator_add_to_db_errors",
+              "refId": "A",
+              "step": 30
+            },
+            {
+              "expr": "qlistener_operator_add_to_db_success{group=\"qrtech\"}",
+              "intervalFactor": 2,
+              "legendFormat": "success",
+              "metric": "qlistener_operator_add_to_db_success",
+              "refId": "B",
+              "step": 30
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Operator Transaction Log",
+          "tooltip": {
+            "msResolution": false,
+            "shared": true,
+            "sort": 0,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "xaxis": {
+            "show": true
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {
+            "errors": "#BF1B00",
+            "success": "#7EB26D"
+          },
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 11,
+          "isNew": true,
+          "legend": {
+            "avg": false,
+            "current": true,
+            "hideEmpty": true,
+            "hideZero": true,
+            "max": true,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "qlistener_content_sent_add_to_db_errors{group=\"qrtech\"}",
+              "intervalFactor": 2,
+              "legendFormat": "errors",
+              "metric": "qlistener_content_sent_add_to_db_errors",
+              "refId": "A",
+              "step": 30
+            },
+            {
+              "expr": "qlistener_content_sent_add_to_db_success{group=\"qrtech\"}",
+              "intervalFactor": 2,
+              "legendFormat": "success",
+              "metric": "qlistener_content_sent_add_to_db_success",
+              "refId": "B",
+              "step": 30
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Content Sent",
+          "tooltip": {
+            "msResolution": false,
+            "shared": true,
+            "sort": 0,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "xaxis": {
+            "show": true
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {
+            "errors": "#BF1B00",
+            "success": "#7EB26D"
+          },
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 12,
+          "isNew": true,
+          "legend": {
+            "avg": false,
+            "current": true,
+            "hideEmpty": true,
+            "hideZero": true,
+            "max": true,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "qlistener_pixel_add_to_db_errors{group=\"qrtech\"}",
+              "intervalFactor": 2,
+              "legendFormat": "errors",
+              "metric": "qlistener_pixel_add_to_db_errors",
+              "refId": "A",
+              "step": 30
+            },
+            {
+              "expr": "qlistener_pixel_add_to_db_success{group=\"qrtech\"}",
+              "intervalFactor": 2,
+              "legendFormat": "success",
+              "metric": "qlistener_pixel_add_to_db_success",
+              "refId": "B",
+              "step": 30
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Pixel",
+          "tooltip": {
+            "msResolution": false,
+            "shared": true,
+            "sort": 0,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "xaxis": {
+            "show": true
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {
+            "dropped": "#E24D42",
+            "errors": "#BF1B00",
+            "success": "#7EB26D"
+          },
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 13,
+          "isNew": true,
+          "legend": {
+            "avg": false,
+            "current": true,
+            "hideEmpty": true,
+            "hideZero": true,
+            "max": true,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "qlistener_mt_manager_add_to_db_errors{group=\"qrtech\"}",
+              "intervalFactor": 2,
+              "legendFormat": "errors",
+              "metric": "qlistener_mt_manager_add_to_db_errors",
+              "refId": "A",
+              "step": 30
+            },
+            {
+              "expr": "qlistener_mt_manager_add_to_db_success{group=\"qrtech\"}",
+              "intervalFactor": 2,
+              "legendFormat": "success",
+              "metric": "qlistener_mt_manager_add_to_db_success",
+              "refId": "B",
+              "step": 30
+            },
+            {
+              "expr": "qlistener_mt_manager_dropped{group=\"qrtech\"}",
+              "intervalFactor": 2,
+              "legendFormat": "dropped",
+              "metric": "qlistener_mt_manager_dropped",
+              "refId": "C",
+              "step": 30
+            },
+            {
+              "expr": "qlistener_mt_manager_empty{group=\"qrtech\"}",
+              "intervalFactor": 2,
+              "legendFormat": "empty",
+              "metric": "qlistener_mt_manager_empty",
+              "refId": "D",
+              "step": 30
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "MT Manager",
+          "tooltip": {
+            "msResolution": false,
+            "shared": true,
+            "sort": 0,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "xaxis": {
+            "show": true
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {
+            "dropped": "#E24D42",
+            "errors": "#BF1B00",
+            "success": "#7EB26D"
+          },
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 14,
+          "isNew": true,
+          "legend": {
+            "avg": false,
+            "current": true,
+            "hideEmpty": true,
+            "hideZero": true,
+            "max": true,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "qlistener_user_actions_add_to_db_errors{group=\"qrtech\"}",
+              "intervalFactor": 2,
+              "legendFormat": "errors",
+              "metric": "qlistener_user_actions_add_to_db_errors",
+              "refId": "A",
+              "step": 30
+            },
+            {
+              "expr": "qlistener_user_actions_add_to_db_success{group=\"qrtech\"}",
+              "intervalFactor": 2,
+              "legendFormat": "success",
+              "metric": "qlistener_user_actions_add_to_db_success",
+              "refId": "B",
+              "step": 30
+            },
+            {
+              "expr": "qlistener_user_actions_dropped{group=\"qrtech\"}",
+              "intervalFactor": 2,
+              "legendFormat": "dropped",
+              "metric": "qlistener_user_actions_dropped",
+              "refId": "C",
+              "step": 30
+            },
+            {
+              "expr": "qlistener_user_actions_empty{group=\"qrtech\"}",
+              "intervalFactor": 2,
+              "legendFormat": "empty",
+              "metric": "qlistener_user_actions_empty",
+              "refId": "D",
+              "step": 30
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "User Actions",
+          "tooltip": {
+            "msResolution": false,
+            "shared": true,
+            "sort": 0,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "xaxis": {
+            "show": true
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {
+            "dropped": "#E24D42",
+            "errors": "#BF1B00",
+            "success": "#7EB26D"
+          },
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 15,
+          "isNew": true,
+          "legend": {
+            "avg": false,
+            "current": true,
+            "hideEmpty": true,
+            "hideZero": true,
+            "max": true,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "qlistener_access_campaign_add_to_db_errors{group=\"qrtech\"}",
+              "intervalFactor": 2,
+              "legendFormat": "errors",
+              "metric": "qlistener_access_campaign_add_to_db_errors",
+              "refId": "A",
+              "step": 30
+            },
+            {
+              "expr": "qlistener_access_campaign_add_to_db_success{group=\"qrtech\"}",
+              "intervalFactor": 2,
+              "legendFormat": "success",
+              "metric": "qlistener_access_campaign_add_to_db_success",
+              "refId": "B",
+              "step": 30
+            },
+            {
+              "expr": "qlistener_access_campaign_dropped{group=\"qrtech\"}",
+              "intervalFactor": 2,
+              "legendFormat": "dropped",
+              "metric": "qlistener_access_campaign_dropped",
+              "refId": "C",
+              "step": 30
+            },
+            {
+              "expr": "qlistener_access_campaign_empty{group=\"qrtech\"}",
+              "intervalFactor": 2,
+              "legendFormat": "empty",
+              "metric": "qlistener_access_campaign_empty",
+              "refId": "D",
+              "step": 30
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Access Campaign",
+          "tooltip": {
+            "msResolution": false,
+            "shared": true,
+            "sort": 0,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "xaxis": {
+            "show": true
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        }
+      ],
+      "title": "New row"
+    }
+  ],
+  "time": {
+    "from": "now-3h",
+    "to": "now"
+  },
+  "timepicker": {
+    "refresh_intervals": [
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ],
+    "time_options": [
+      "5m",
+      "15m",
+      "1h",
+      "6h",
+      "12h",
+      "24h",
+      "2d",
+      "7d",
+      "30d"
+    ]
+  },
+  "templating": {
+    "list": []
+  },
+  "annotations": {
+    "list": []
+  },
+  "refresh": "1m",
+  "schemaVersion": 12,
+  "version": 19,
+  "links": [],
+  "gnetId": null
+}

@@ -1,0 +1,1032 @@
+{
+  "id": 16,
+  "title": "Cheese",
+  "tags": [],
+  "style": "dark",
+  "timezone": "browser",
+  "editable": true,
+  "hideControls": false,
+  "sharedCrosshair": false,
+  "rows": [
+    {
+      "collapse": false,
+      "editable": true,
+      "height": "250px",
+      "panels": [
+        {
+          "aliasColors": {
+            "ais": "#3F6833",
+            "ais errors": "#890F02",
+            "dtac": "#B7DBAB",
+            "dtac errors": "#BF1B00",
+            "trueh": "#5195CE",
+            "trueh errors": "#58140C"
+          },
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 1,
+          "isNew": true,
+          "legend": {
+            "avg": false,
+            "current": true,
+            "hideEmpty": true,
+            "hideZero": true,
+            "max": true,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 4,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "telco_ais_success",
+              "intervalFactor": 2,
+              "legendFormat": "ais",
+              "metric": "telco_ais_success",
+              "refId": "A",
+              "step": 40
+            },
+            {
+              "expr": "telco_ais_errors",
+              "intervalFactor": 2,
+              "legendFormat": "ais errors",
+              "metric": "telco_ais_errors",
+              "refId": "D",
+              "step": 40
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "AIS",
+          "tooltip": {
+            "msResolution": false,
+            "shared": true,
+            "sort": 0,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "xaxis": {
+            "show": true
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {
+            "ais": "#3F6833",
+            "ais errors": "#890F02",
+            "dtac": "#508642",
+            "dtac errors": "#BF1B00",
+            "trueh": "#5195CE",
+            "trueh errors": "#58140C"
+          },
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 2,
+          "isNew": true,
+          "legend": {
+            "avg": false,
+            "current": true,
+            "hideEmpty": true,
+            "hideZero": true,
+            "max": true,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 4,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "telco_dtac_success",
+              "intervalFactor": 2,
+              "legendFormat": "dtac",
+              "metric": "telco_dtac_success",
+              "refId": "B",
+              "step": 40
+            },
+            {
+              "expr": "telco_dtac_errors",
+              "intervalFactor": 2,
+              "legendFormat": "dtac errors",
+              "metric": "telco_dtac_errors",
+              "refId": "E",
+              "step": 40
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "DTAC",
+          "tooltip": {
+            "msResolution": false,
+            "shared": true,
+            "sort": 0,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "xaxis": {
+            "show": true
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {
+            "ais": "#3F6833",
+            "ais errors": "#890F02",
+            "dtac": "#B7DBAB",
+            "dtac errors": "#BF1B00",
+            "trueh": "#508642",
+            "trueh errors": "#58140C"
+          },
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 3,
+          "isNew": true,
+          "legend": {
+            "avg": false,
+            "current": true,
+            "hideEmpty": true,
+            "hideZero": true,
+            "max": true,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 4,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "telco_trueh_success",
+              "intervalFactor": 2,
+              "legendFormat": "trueh",
+              "metric": "telco_trueh_success",
+              "refId": "C",
+              "step": 40
+            },
+            {
+              "expr": "telco_trueh_errors",
+              "intervalFactor": 2,
+              "legendFormat": "trueh errors",
+              "metric": "telco_trueh_errors",
+              "refId": "F",
+              "step": 40
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "TRUEH",
+          "tooltip": {
+            "msResolution": false,
+            "shared": true,
+            "sort": 0,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "xaxis": {
+            "show": true
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {
+            "absent parameters": "#BF1B00",
+            "errors": "#BF1B00",
+            "errors{group=\"th\",instance=\"52.220.98.67:50306\",job=\"cheese-telco\",name=\"cheese\"}": "#BF1B00",
+            "parse time erros": "#6ED0E0",
+            "telco_404_page_not_found{group=\"th\",instance=\"52.220.98.67:50306\",job=\"cheese-telco\",name=\"cheese\"}": "#EF843C",
+            "telco_adsent_parameter{group=\"th\",instance=\"52.220.98.67:50306\",job=\"cheese-telco\",name=\"cheese\"}": "#CCA300",
+            "telco_mo_parse_time_errors{group=\"th\",instance=\"52.220.98.67:50306\",job=\"cheese-telco\",name=\"cheese\"}": "#E24D42",
+            "telco_mo_wrong_service_key{group=\"th\",instance=\"52.220.98.67:50306\",job=\"cheese-telco\",name=\"cheese\"}": "#BF1B00",
+            "telco_notify_errors{group=\"th\",instance=\"52.220.98.67:50306\",job=\"cheese-telco\",name=\"cheese\"}": "#BF1B00",
+            "telco_unknown_operator{group=\"th\",instance=\"52.220.98.67:50306\",job=\"cheese-telco\",name=\"cheese\"}": "#BF1B00",
+            "unknown operator": "#BF1B00",
+            "wrong service key": "#BF1B00"
+          },
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 4,
+          "isNew": true,
+          "legend": {
+            "avg": false,
+            "current": true,
+            "hideEmpty": true,
+            "hideZero": true,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 12,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "success{group=\"th\", job=\"cheese-telco\"}",
+              "intervalFactor": 2,
+              "legendFormat": "success",
+              "metric": "success",
+              "refId": "A",
+              "step": 20
+            },
+            {
+              "expr": "errors{group=\"th\", job=\"cheese-telco\"}",
+              "intervalFactor": 2,
+              "legendFormat": "errors",
+              "metric": "errors",
+              "refId": "B",
+              "step": 20
+            },
+            {
+              "expr": "telco_adsent_parameter{group=\"th\"}",
+              "interval": "",
+              "intervalFactor": 2,
+              "legendFormat": "absent parameters",
+              "metric": "telco_adsent_parameter",
+              "refId": "C",
+              "step": 20
+            },
+            {
+              "expr": "telco_404_page_not_found{group=\"th\"}",
+              "intervalFactor": 2,
+              "legendFormat": "404 page",
+              "metric": "telco_404_page_not_found",
+              "refId": "D",
+              "step": 20
+            },
+            {
+              "expr": "dropped{group=\"th\"}",
+              "intervalFactor": 2,
+              "legendFormat": "dropped",
+              "metric": "dropped",
+              "refId": "E",
+              "step": 20
+            },
+            {
+              "expr": "empty{group=\"th\"}",
+              "intervalFactor": 2,
+              "legendFormat": "empty",
+              "metric": "empty",
+              "refId": "F",
+              "step": 20
+            },
+            {
+              "expr": "telco_notify_errors{group=\"th\"}",
+              "intervalFactor": 2,
+              "legendFormat": "notify errors",
+              "metric": "telco_notify_errors",
+              "refId": "G",
+              "step": 20
+            },
+            {
+              "expr": "telco_mo_parse_time_errors{group=\"th\"}",
+              "intervalFactor": 2,
+              "legendFormat": "parse time erros",
+              "metric": "telco_mo_parse_time_errors",
+              "refId": "H",
+              "step": 20
+            },
+            {
+              "expr": "telco_mo_wrong_service_key{group=\"th\"}",
+              "interval": "",
+              "intervalFactor": 2,
+              "legendFormat": "wrong service key",
+              "metric": "telco_mo_wrong_service_key",
+              "refId": "I",
+              "step": 20
+            },
+            {
+              "expr": "telco_unknown_operator{group=\"th\"}",
+              "intervalFactor": 2,
+              "legendFormat": "unknown operator",
+              "metric": "telco_unknown_operator",
+              "refId": "J",
+              "step": 20
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Incoming Traffic Okayness",
+          "tooltip": {
+            "msResolution": false,
+            "shared": true,
+            "sort": 0,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "xaxis": {
+            "show": true
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        }
+      ],
+      "title": "Row"
+    },
+    {
+      "collapse": false,
+      "editable": true,
+      "height": "250px",
+      "panels": [
+        {
+          "aliasColors": {
+            "add new mo": "#7EB26D",
+            "mo dropped": "#BF1B00",
+            "mo erorrs": "#BF1B00",
+            "unsubscribe": "#6ED0E0"
+          },
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 5,
+          "isNew": true,
+          "legend": {
+            "avg": false,
+            "current": true,
+            "hideEmpty": true,
+            "hideZero": true,
+            "max": true,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "mt_manager_cheese_mo_dropped",
+              "intervalFactor": 2,
+              "legendFormat": "mo dropped",
+              "metric": "mt_manager_cheese_mo_dropped",
+              "refId": "A",
+              "step": 30
+            },
+            {
+              "expr": "mt_manager_cheese_add_to_db_success",
+              "intervalFactor": 2,
+              "legendFormat": "add new mo",
+              "metric": "mt_manager_cheese_add_to_db_success",
+              "refId": "B",
+              "step": 30
+            },
+            {
+              "expr": "mt_manager_cheese_add_to_db_errors",
+              "intervalFactor": 2,
+              "legendFormat": "mo erorrs",
+              "metric": "mt_manager_cheese_add_to_db_errors",
+              "refId": "C",
+              "step": 30
+            },
+            {
+              "expr": "warnings{group=\"th\"}",
+              "intervalFactor": 2,
+              "legendFormat": "warnings",
+              "metric": "warnings",
+              "refId": "D",
+              "step": 30
+            },
+            {
+              "expr": "telco_unsubscribe{group=\"th\"}",
+              "intervalFactor": 2,
+              "legendFormat": "unsubscribe",
+              "metric": "telco_unsubscribe",
+              "refId": "E",
+              "step": 30
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "New MO",
+          "tooltip": {
+            "msResolution": false,
+            "shared": true,
+            "sort": 0,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "xaxis": {
+            "show": true
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {
+            "dropped": "#890F02",
+            "empty": "#890F02",
+            "errors": "#BF1B00",
+            "success": "#7EB26D"
+          },
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 6,
+          "isNew": true,
+          "legend": {
+            "avg": false,
+            "current": true,
+            "hideEmpty": false,
+            "hideZero": false,
+            "max": true,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "qlistener_operator_add_to_db_errors{group=\"th\"}",
+              "intervalFactor": 2,
+              "legendFormat": "errors",
+              "metric": "qlistener_operator_add_to_db_errors",
+              "refId": "A",
+              "step": 30
+            },
+            {
+              "expr": "qlistener_operator_add_to_db_success{group=\"th\"}",
+              "intervalFactor": 2,
+              "legendFormat": "success",
+              "metric": "qlistener_operator_add_to_db_success",
+              "refId": "B",
+              "step": 30
+            },
+            {
+              "expr": "qlistener_operator_dropped{group=\"th\"}",
+              "intervalFactor": 2,
+              "legendFormat": "dropped",
+              "metric": "qlistener_operator_dropped",
+              "refId": "C",
+              "step": 30
+            },
+            {
+              "expr": "qlistener_operator_empty{group=\"th\"}",
+              "intervalFactor": 2,
+              "legendFormat": "empty",
+              "metric": "qlistener_operator_empty",
+              "refId": "D",
+              "step": 30
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Operator Transaction Log",
+          "tooltip": {
+            "msResolution": false,
+            "shared": true,
+            "sort": 0,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "xaxis": {
+            "show": true
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        }
+      ],
+      "title": "New row"
+    },
+    {
+      "collapse": false,
+      "editable": true,
+      "height": "250px",
+      "panels": [
+        {
+          "aliasColors": {
+            "incoming": "#508642"
+          },
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 7,
+          "isNew": true,
+          "legend": {
+            "avg": false,
+            "current": true,
+            "hideEmpty": true,
+            "hideZero": true,
+            "max": true,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 12,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "dispatcherd_campaign_access{group=\"th\"}",
+              "intervalFactor": 2,
+              "legendFormat": "access campaign",
+              "metric": "dispatcherd_campaign_access",
+              "refId": "A",
+              "step": 20
+            },
+            {
+              "expr": "dispatcherd_error404{group=\"th\"}",
+              "intervalFactor": 2,
+              "legendFormat": "404 error",
+              "metric": "dispatcherd_error404",
+              "refId": "B",
+              "step": 20
+            },
+            {
+              "expr": "dispatcherd_incoming{group=\"th\"}",
+              "intervalFactor": 2,
+              "legendFormat": "incoming",
+              "metric": "dispatcherd_incoming",
+              "refId": "C",
+              "step": 20
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Dispatcher",
+          "tooltip": {
+            "msResolution": false,
+            "shared": true,
+            "sort": 0,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "xaxis": {
+            "show": true
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        }
+      ],
+      "title": "New row"
+    },
+    {
+      "collapse": false,
+      "editable": true,
+      "height": "250px",
+      "panels": [
+        {
+          "aliasColors": {
+            "buffered  empty": "#890F02",
+            "buffered  errors": "#890F02",
+            "buffered  success": "#B7DBAB",
+            "buffered dropped": "#890F02",
+            "buffered not found": "#E5A8E2",
+            "dropped": "#C15C17",
+            "errors": "#890F02",
+            "not found": "#6ED0E0",
+            "pixels dropped": "#890F02",
+            "pixels_dropped{group=\"th\",instance=\"52.220.98.67:50309\",job=\"cheese-pixels\",name=\"pixels\"}": "#EAB839",
+            "publisher error": "#EF843C",
+            "success": "#7EB26D"
+          },
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 8,
+          "isNew": true,
+          "legend": {
+            "avg": false,
+            "current": true,
+            "hideEmpty": true,
+            "hideZero": true,
+            "max": true,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 12,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "pixels_buffer_pixel_dropped{group=\"th\"}",
+              "intervalFactor": 2,
+              "legendFormat": "buffered dropped",
+              "metric": "pixels_buffer_pixel_dropped",
+              "refId": "A",
+              "step": 20
+            },
+            {
+              "expr": "pixels_buffer_pixel_empty{group=\"th\"}",
+              "intervalFactor": 2,
+              "legendFormat": "buffered  empty",
+              "metric": "pixels_buffer_pixel_empty",
+              "refId": "B",
+              "step": 20
+            },
+            {
+              "expr": "pixels_buffer_pixel_errors{group=\"th\"}",
+              "intervalFactor": 2,
+              "legendFormat": "buffered  errors",
+              "metric": "pixels_buffer_pixel_errors",
+              "refId": "C",
+              "step": 20
+            },
+            {
+              "expr": "pixels_buffer_pixel_not_found{group=\"th\"}",
+              "intervalFactor": 2,
+              "legendFormat": "buffered not found",
+              "metric": "pixels_buffer_pixel_not_found",
+              "refId": "D",
+              "step": 20
+            },
+            {
+              "expr": "pixels_buffer_pixel_success{group=\"th\"}",
+              "intervalFactor": 2,
+              "legendFormat": "buffered  success",
+              "metric": "pixels_buffer_pixel_success",
+              "refId": "E",
+              "step": 20
+            },
+            {
+              "expr": "pixels_empty_publisher{group=\"th\"}",
+              "intervalFactor": 2,
+              "legendFormat": "empty publisher ",
+              "metric": "pixels_empty_publisher",
+              "refId": "F",
+              "step": 20
+            },
+            {
+              "expr": "pixels_empty_settings{group=\"th\"}",
+              "intervalFactor": 2,
+              "legendFormat": "empty settings",
+              "metric": "pixels_empty_settings",
+              "refId": "G",
+              "step": 20
+            },
+            {
+              "expr": "pixels_publisher_error{group=\"th\"}",
+              "intervalFactor": 2,
+              "legendFormat": "publisher error",
+              "metric": "pixels_publisher_error",
+              "refId": "H",
+              "step": 20
+            },
+            {
+              "expr": "pixels_dropped{group=\"th\"}",
+              "intervalFactor": 2,
+              "legendFormat": "pixels dropped",
+              "metric": "pixels_dropped",
+              "refId": "I",
+              "step": 20
+            },
+            {
+              "expr": "success{group=\"th\", name=\"pixels\"}",
+              "intervalFactor": 2,
+              "legendFormat": "success",
+              "metric": "success",
+              "refId": "J",
+              "step": 20
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Pixels",
+          "tooltip": {
+            "msResolution": false,
+            "shared": true,
+            "sort": 0,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "xaxis": {
+            "show": true
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        }
+      ],
+      "title": "New row"
+    },
+    {
+      "collapse": false,
+      "editable": true,
+      "height": "250px",
+      "panels": [],
+      "title": "New row"
+    }
+  ],
+  "time": {
+    "from": "now-3h",
+    "to": "now"
+  },
+  "timepicker": {
+    "refresh_intervals": [
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ],
+    "time_options": [
+      "5m",
+      "15m",
+      "1h",
+      "6h",
+      "12h",
+      "24h",
+      "2d",
+      "7d",
+      "30d"
+    ]
+  },
+  "templating": {
+    "list": []
+  },
+  "annotations": {
+    "list": []
+  },
+  "refresh": "1m",
+  "schemaVersion": 12,
+  "version": 42,
+  "links": [],
+  "gnetId": null
+}

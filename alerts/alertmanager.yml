@@ -1,0 +1,29 @@
+global:
+  smtp_smarthost: 'localhost:25'
+  smtp_from: 'alertmanager@sg-mumbai.linkit360.com'
+
+route:
+  receiver: 'bot'
+  group_by: ['alertname', 'cluster']
+  group_wait: 30s
+  group_interval: 5m
+  repeat_interval: 3h
+
+# Inhibition rules allow to mute a set of alerts given that another alert is
+# firing.
+# We use this to mute any warning-level notifications if the same alert is
+# already critical.
+inhibit_rules:
+- source_match:
+    severity: 'critical'
+  target_match:
+    severity: 'warning'
+  # Apply inhibition if the alertname is the same.
+  equal: ['alertname']
+
+
+receivers:
+- name: 'bot'
+  webhook_configs:
+  - send_resolved: True
+    url: http://127.0.0.1:9087/alert

@@ -1,0 +1,253 @@
+# my global config
+global:
+  scrape_interval:     15s # By default, scrape targets every 15 seconds.
+  evaluation_interval: 15s # By default, scrape targets every 15 seconds.
+  # scrape_timeout is set to the global default (10s).
+
+  # Attach these labels to any time series or alerts when communicating with
+  # external systems (federation, remote storage, Alertmanager).
+  external_labels:
+      monitor: 'sg-monitor'
+
+# Load rules once and periodically evaluate them according to the global 'evaluation_interval'.
+rule_files:
+  # - "first.rules"
+  # - "second.rules"
+
+# A scrape configuration containing exactly one endpoint to scrape:
+# Here it's Prometheus itself.
+scrape_configs:
+  # The job name is added as a label `job=<job_name>` to any timeseries scraped from this config.
+  - job_name: 'prometheus'
+
+    # Override the global default and scrape targets from this job every 5 seconds.
+    scrape_interval: 5s
+
+    # metrics_path defaults to '/metrics'
+    # scheme defaults to 'http'.
+
+    static_configs:
+      - targets: ['localhost:9090']
+
+  - job_name:       'dispatcherd'
+    scrape_interval: 30s
+    static_configs:
+      - targets: ['52.66.23.201:50300']
+        labels:
+          group: 'pk'
+          name: 'dispatcherd'
+
+  - job_name:       'contentd'
+    scrape_interval: 30s
+    static_configs:
+      - targets: ['52.66.23.201:50302']
+        labels:
+          group: 'pk'
+          name: 'contentd'
+
+  - job_name:       'jobs'
+    scrape_interval: 30s
+    static_configs:
+      - targets: ['52.66.23.201:50303']
+        labels:
+          group: 'pk'
+          name: 'jobs'
+
+  - job_name:       'qlistener'
+    scrape_interval: 30s
+    static_configs:
+      - targets: ['52.66.23.201:50304']
+        labels:
+          group: 'pk'
+          name: 'qlistener'
+
+
+  - job_name:       'mt_manager'
+    scrape_interval: 30s
+    static_configs:
+      - targets: ['52.66.23.201:50305']
+        labels:
+          group: 'pk'
+          name: 'mt'
+
+  - job_name:       'mobilink'
+    scrape_interval: 15s
+    static_configs:
+      - targets: ['52.66.23.201:50306']
+        labels:
+          group: 'pk'
+          name: 'mobilink'
+
+  - job_name:       'inmem'
+    scrape_interval: 30s
+    static_configs:
+      - targets: ['52.66.23.201:50308']
+        labels:
+          group: 'pk'
+          name: 'inmemory'
+
+  - job_name:       'pixels'
+    scrape_interval: 30s
+    static_configs:
+      - targets: ['52.66.23.201:50309']
+        labels:
+          group: 'pk'
+          name: 'pixels'
+
+  - job_name:       'node'
+    scrape_interval: 1m
+    static_configs:
+      - targets: ['52.66.23.201:50310']
+        labels:
+          group: 'pk'
+          name: 'node'
+
+  - job_name:       'yondu-dispatcherd'
+    scrape_interval: 30s
+    static_configs:
+      - targets: ['52.76.153.135:50300']
+        labels:
+          group: 'ph'
+          name: 'dispatcherd'
+
+  - job_name:       'yondu-contentd'
+    scrape_interval: 30s
+    static_configs:
+      - targets: ['52.76.153.135:50302']
+        labels:
+          group: 'ph'
+          name: 'contentd'
+
+  - job_name:       'yondu-jobs'
+    scrape_interval: 30s
+    static_configs:
+      - targets: ['52.76.153.135:50303']
+        labels:
+          group: 'ph'
+          name: 'jobs'
+
+  - job_name:       'yondu-qlistener'
+    scrape_interval: 30s
+    static_configs:
+      - targets: ['52.76.153.135:50304']
+        labels:
+          group: 'ph'
+          name: 'qlistener'
+
+
+  - job_name:       'yondu-mt_manager'
+    scrape_interval: 30s
+    static_configs:
+      - targets: ['52.76.153.135:50305']
+        labels:
+          group: 'ph'
+          name: 'mt'
+
+  - job_name:       'yondu-telco'
+    scrape_interval: 15s
+    static_configs:
+      - targets: ['52.76.153.135:50306']
+        labels:
+          group: 'ph'
+          name: 'yondu'
+
+  - job_name:       'yondu-inmem'
+    scrape_interval: 30s
+    static_configs:
+      - targets: ['52.76.153.135:50308']
+        labels:
+          group: 'ph'
+          name: 'inmemory'
+
+  - job_name:       'yondu-pixels'
+    scrape_interval: 30s
+    static_configs:
+      - targets: ['52.76.153.135:50309']
+        labels:
+          group: 'ph'
+          name: 'pixels'
+
+  - job_name:       'yondu-node'
+    scrape_interval: 1m
+    static_configs:
+      - targets: ['52.76.153.135:50310']
+        labels:
+          group: 'ph'
+          name: 'node'
+
+  - job_name:       'cheese-dispatcherd'
+    scrape_interval: 30s
+    static_configs:
+      - targets: ['52.220.98.67:50300']
+        labels:
+          group: 'th'
+          name: 'dispatcherd'
+
+  - job_name:       'cheese-contentd'
+    scrape_interval: 30s
+    static_configs:
+      - targets: ['52.220.98.67:50302']
+        labels:
+          group: 'th'
+          name: 'contentd'
+
+  - job_name:       'cheese-jobs'
+    scrape_interval: 30s
+    static_configs:
+      - targets: ['52.220.98.67:50303']
+        labels:
+          group: 'th'
+          name: 'jobs'
+
+  - job_name:       'cheese-qlistener'
+    scrape_interval: 30s
+    static_configs:
+      - targets: ['52.220.98.67:50304']
+        labels:
+          group: 'th'
+          name: 'qlistener'
+
+
+  - job_name:       'cheese-mt_manager'
+    scrape_interval: 30s
+    static_configs:
+      - targets: ['52.220.98.67:50305']
+        labels:
+          group: 'th'
+          name: 'mt'
+
+  - job_name:       'cheese-telco'
+    scrape_interval: 15s
+    static_configs:
+      - targets: ['52.220.98.67:50306']
+        labels:
+          group: 'th'
+          name: 'cheese'
+
+  - job_name:       'cheese-inmem'
+    scrape_interval: 30s
+    static_configs:
+      - targets: ['52.220.98.67:50308']
+        labels:
+          group: 'th'
+          name: 'inmemory'
+
+  - job_name:       'cheese-pixels'
+    scrape_interval: 30s
+    static_configs:
+      - targets: ['52.220.98.67:50309']
+        labels:
+          group: 'th'
+          name: 'pixels'
+
+  - job_name:       'cheese-node'
+    scrape_interval: 1m
+    static_configs:
+      - targets: ['52.220.98.67:50310']
+        labels:
+          group: 'th'
+          name: 'node'
+
+
+rule_files:
+  - rules.conf
