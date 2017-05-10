@@ -299,6 +299,7 @@
             "errors": "#BF1B00",
             "errors{group=\"th\",instance=\"52.220.98.67:50306\",job=\"cheese-telco\",name=\"cheese\"}": "#BF1B00",
             "parse time erros": "#6ED0E0",
+            "success": "#7EB26D",
             "telco_404_page_not_found{group=\"th\",instance=\"52.220.98.67:50306\",job=\"cheese-telco\",name=\"cheese\"}": "#EF843C",
             "telco_adsent_parameter{group=\"th\",instance=\"52.220.98.67:50306\",job=\"cheese-telco\",name=\"cheese\"}": "#CCA300",
             "telco_mo_parse_time_errors{group=\"th\",instance=\"52.220.98.67:50306\",job=\"cheese-telco\",name=\"cheese\"}": "#E24D42",
@@ -340,7 +341,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "success{group=\"th\", job=\"cheese-telco\"}",
+              "expr": "success{job=\"cheese-telco\"}",
               "intervalFactor": 2,
               "legendFormat": "success",
               "metric": "success",
@@ -348,7 +349,7 @@
               "step": 20
             },
             {
-              "expr": "errors{group=\"th\", job=\"cheese-telco\"}",
+              "expr": "errors{job=\"cheese-telco\"}",
               "intervalFactor": 2,
               "legendFormat": "errors",
               "metric": "errors",
@@ -356,7 +357,7 @@
               "step": 20
             },
             {
-              "expr": "telco_adsent_parameter{group=\"th\"}",
+              "expr": "telco_adsent_parameter{job=\"cheese-telco\"}",
               "interval": "",
               "intervalFactor": 2,
               "legendFormat": "absent parameters",
@@ -365,7 +366,7 @@
               "step": 20
             },
             {
-              "expr": "telco_404_page_not_found{group=\"th\"}",
+              "expr": "telco_404_page_not_found{job=\"cheese-telco\"}",
               "intervalFactor": 2,
               "legendFormat": "404 page",
               "metric": "telco_404_page_not_found",
@@ -373,7 +374,7 @@
               "step": 20
             },
             {
-              "expr": "dropped{group=\"th\"}",
+              "expr": "dropped{op=\"cheese\"}",
               "intervalFactor": 2,
               "legendFormat": "dropped",
               "metric": "dropped",
@@ -381,7 +382,7 @@
               "step": 20
             },
             {
-              "expr": "empty{group=\"th\"}",
+              "expr": "empty{op=\"cheese\"}",
               "intervalFactor": 2,
               "legendFormat": "empty",
               "metric": "empty",
@@ -389,7 +390,7 @@
               "step": 20
             },
             {
-              "expr": "telco_notify_errors{group=\"th\"}",
+              "expr": "telco_notify_errors{op=\"cheese\"}",
               "intervalFactor": 2,
               "legendFormat": "notify errors",
               "metric": "telco_notify_errors",
@@ -397,7 +398,7 @@
               "step": 20
             },
             {
-              "expr": "telco_mo_parse_time_errors{group=\"th\"}",
+              "expr": "telco_mo_parse_time_errors{op=\"cheese\"}",
               "intervalFactor": 2,
               "legendFormat": "parse time erros",
               "metric": "telco_mo_parse_time_errors",
@@ -405,7 +406,7 @@
               "step": 20
             },
             {
-              "expr": "telco_mo_wrong_service_key{group=\"th\"}",
+              "expr": "telco_mo_wrong_service_key{op=\"cheese\"}",
               "interval": "",
               "intervalFactor": 2,
               "legendFormat": "wrong service key",
@@ -414,7 +415,7 @@
               "step": 20
             },
             {
-              "expr": "telco_unknown_operator{group=\"th\"}",
+              "expr": "telco_unknown_operator{op=\"cheese\"}",
               "intervalFactor": 2,
               "legendFormat": "unknown operator",
               "metric": "telco_unknown_operator",
@@ -509,31 +510,31 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "mt_manager_cheese_mo_dropped",
+              "expr": "mt_cheese_mo_dropped",
               "intervalFactor": 2,
               "legendFormat": "mo dropped",
-              "metric": "mt_manager_cheese_mo_dropped",
+              "metric": "mt_cheese_mo_dropped",
               "refId": "A",
               "step": 30
             },
             {
-              "expr": "mt_manager_cheese_add_to_db_success",
+              "expr": "mt_cheese_add_to_db_success",
               "intervalFactor": 2,
               "legendFormat": "add new mo",
-              "metric": "mt_manager_cheese_add_to_db_success",
+              "metric": "mt_cheese_add_to_db_success",
               "refId": "B",
               "step": 30
             },
             {
-              "expr": "mt_manager_cheese_add_to_db_errors",
+              "expr": "mt_cheese_add_to_db_errors",
               "intervalFactor": 2,
               "legendFormat": "mo erorrs",
-              "metric": "mt_manager_cheese_add_to_db_errors",
+              "metric": "mt_cheese_add_to_db_errors",
               "refId": "C",
               "step": 30
             },
             {
-              "expr": "warnings{group=\"th\"}",
+              "expr": "warnings{country=\"th\"}",
               "intervalFactor": 2,
               "legendFormat": "warnings",
               "metric": "warnings",
@@ -541,7 +542,7 @@
               "step": 30
             },
             {
-              "expr": "telco_unsubscribe{group=\"th\"}",
+              "expr": "telco_unsubscribe{country=\"th\"}",
               "intervalFactor": 2,
               "legendFormat": "unsubscribe",
               "metric": "telco_unsubscribe",
@@ -602,8 +603,8 @@
           "legend": {
             "avg": false,
             "current": true,
-            "hideEmpty": false,
-            "hideZero": false,
+            "hideEmpty": true,
+            "hideZero": true,
             "max": true,
             "min": false,
             "show": true,
@@ -624,7 +625,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "qlistener_operator_add_to_db_errors{group=\"th\"}",
+              "expr": "qlistener_operator_add_to_db_errors{op=\"cheese\"}",
               "intervalFactor": 2,
               "legendFormat": "errors",
               "metric": "qlistener_operator_add_to_db_errors",
@@ -632,7 +633,7 @@
               "step": 30
             },
             {
-              "expr": "qlistener_operator_add_to_db_success{group=\"th\"}",
+              "expr": "qlistener_operator_add_to_db_success{op=\"cheese\"}",
               "intervalFactor": 2,
               "legendFormat": "success",
               "metric": "qlistener_operator_add_to_db_success",
@@ -640,7 +641,7 @@
               "step": 30
             },
             {
-              "expr": "qlistener_operator_dropped{group=\"th\"}",
+              "expr": "qlistener_operator_dropped{op=\"cheese\"}",
               "intervalFactor": 2,
               "legendFormat": "dropped",
               "metric": "qlistener_operator_dropped",
@@ -648,7 +649,7 @@
               "step": 30
             },
             {
-              "expr": "qlistener_operator_empty{group=\"th\"}",
+              "expr": "qlistener_operator_empty{op=\"cheese\"}",
               "intervalFactor": 2,
               "legendFormat": "empty",
               "metric": "qlistener_operator_empty",
@@ -740,7 +741,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "dispatcherd_campaign_access{group=\"th\"}",
+              "expr": "dispatcherd_campaign_access{op=\"cheese\"}",
               "intervalFactor": 2,
               "legendFormat": "access campaign",
               "metric": "dispatcherd_campaign_access",
@@ -748,7 +749,7 @@
               "step": 20
             },
             {
-              "expr": "dispatcherd_error404{group=\"th\"}",
+              "expr": "dispatcherd_error404{op=\"cheese\"}",
               "intervalFactor": 2,
               "legendFormat": "404 error",
               "metric": "dispatcherd_error404",
@@ -756,7 +757,7 @@
               "step": 20
             },
             {
-              "expr": "dispatcherd_incoming{group=\"th\"}",
+              "expr": "dispatcherd_incoming{op=\"cheese\"}",
               "intervalFactor": 2,
               "legendFormat": "incoming",
               "metric": "dispatcherd_incoming",
@@ -859,7 +860,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "pixels_buffer_pixel_dropped{group=\"th\"}",
+              "expr": "pixels_buffer_pixel_dropped{op=\"cheese\"}",
               "intervalFactor": 2,
               "legendFormat": "buffered dropped",
               "metric": "pixels_buffer_pixel_dropped",
@@ -867,7 +868,7 @@
               "step": 20
             },
             {
-              "expr": "pixels_buffer_pixel_empty{group=\"th\"}",
+              "expr": "pixels_buffer_pixel_empty{op=\"cheese\"}",
               "intervalFactor": 2,
               "legendFormat": "buffered  empty",
               "metric": "pixels_buffer_pixel_empty",
@@ -875,7 +876,7 @@
               "step": 20
             },
             {
-              "expr": "pixels_buffer_pixel_errors{group=\"th\"}",
+              "expr": "pixels_buffer_pixel_errors{op=\"cheese\"}",
               "intervalFactor": 2,
               "legendFormat": "buffered  errors",
               "metric": "pixels_buffer_pixel_errors",
@@ -883,7 +884,7 @@
               "step": 20
             },
             {
-              "expr": "pixels_buffer_pixel_not_found{group=\"th\"}",
+              "expr": "pixels_buffer_pixel_not_found{op=\"cheese\"}",
               "intervalFactor": 2,
               "legendFormat": "buffered not found",
               "metric": "pixels_buffer_pixel_not_found",
@@ -891,7 +892,7 @@
               "step": 20
             },
             {
-              "expr": "pixels_buffer_pixel_success{group=\"th\"}",
+              "expr": "pixels_buffer_pixel_success{op=\"cheese\"}",
               "intervalFactor": 2,
               "legendFormat": "buffered  success",
               "metric": "pixels_buffer_pixel_success",
@@ -899,7 +900,7 @@
               "step": 20
             },
             {
-              "expr": "pixels_empty_publisher{group=\"th\"}",
+              "expr": "pixels_empty_publisher{op=\"cheese\"}",
               "intervalFactor": 2,
               "legendFormat": "empty publisher ",
               "metric": "pixels_empty_publisher",
@@ -907,7 +908,7 @@
               "step": 20
             },
             {
-              "expr": "pixels_empty_settings{group=\"th\"}",
+              "expr": "pixels_empty_settings{op=\"cheese\"}",
               "intervalFactor": 2,
               "legendFormat": "empty settings",
               "metric": "pixels_empty_settings",
@@ -915,7 +916,7 @@
               "step": 20
             },
             {
-              "expr": "pixels_publisher_error{group=\"th\"}",
+              "expr": "pixels_publisher_error{op=\"cheese\"}",
               "intervalFactor": 2,
               "legendFormat": "publisher error",
               "metric": "pixels_publisher_error",
@@ -923,7 +924,7 @@
               "step": 20
             },
             {
-              "expr": "pixels_dropped{group=\"th\"}",
+              "expr": "pixels_dropped{op=\"cheese\"}",
               "intervalFactor": 2,
               "legendFormat": "pixels dropped",
               "metric": "pixels_dropped",
@@ -931,7 +932,7 @@
               "step": 20
             },
             {
-              "expr": "success{group=\"th\", name=\"pixels\"}",
+              "expr": "success{op=\"cheese\", name=\"pixels\"}",
               "intervalFactor": 2,
               "legendFormat": "success",
               "metric": "success",
@@ -982,200 +983,6 @@
       "showTitle": false,
       "title": "New row",
       "titleSize": "h6"
-    },
-    {
-      "collapse": false,
-      "height": "250px",
-      "panels": [
-        {
-          "aliasColors": {
-            "campaign_id_empty": "#890F02",
-            "errors{group=\"th\",instance=\"52.220.98.67:50316\",job=\"cheese-reporter\",name=\"reporter\"}": "#890F02"
-          },
-          "bars": false,
-          "datasource": null,
-          "fill": 1,
-          "id": 10,
-          "legend": {
-            "avg": false,
-            "current": true,
-            "hideEmpty": true,
-            "hideZero": true,
-            "max": true,
-            "min": false,
-            "show": true,
-            "total": false,
-            "values": true
-          },
-          "lines": true,
-          "linewidth": 1,
-          "links": [],
-          "nullPointMode": "null",
-          "percentage": false,
-          "pointradius": 5,
-          "points": false,
-          "renderer": "flot",
-          "seriesOverrides": [],
-          "span": 12,
-          "stack": false,
-          "steppedLine": false,
-          "targets": [
-            {
-              "expr": "errors_campaign_id_empty",
-              "intervalFactor": 2,
-              "legendFormat": "campaign_id_empty",
-              "metric": "errors_campaign_id_empty",
-              "refId": "A",
-              "step": 20
-            },
-            {
-              "expr": "errors{name=\"reporter\"}",
-              "intervalFactor": 2,
-              "legendFormat": "reporter errors",
-              "metric": "errors",
-              "refId": "B",
-              "step": 20
-            }
-          ],
-          "thresholds": [],
-          "timeFrom": null,
-          "timeShift": null,
-          "title": "Reporter Errors",
-          "tooltip": {
-            "shared": true,
-            "sort": 0,
-            "value_type": "individual"
-          },
-          "type": "graph",
-          "xaxis": {
-            "mode": "time",
-            "name": null,
-            "show": true,
-            "values": []
-          },
-          "yaxes": [
-            {
-              "format": "short",
-              "label": null,
-              "logBase": 1,
-              "max": null,
-              "min": null,
-              "show": true
-            },
-            {
-              "format": "short",
-              "label": null,
-              "logBase": 1,
-              "max": null,
-              "min": null,
-              "show": true
-            }
-          ]
-        }
-      ],
-      "repeat": null,
-      "repeatIteration": null,
-      "repeatRowId": null,
-      "showTitle": false,
-      "title": "New row",
-      "titleSize": "h6"
-    },
-    {
-      "collapse": false,
-      "height": 250,
-      "panels": [
-        {
-          "aliasColors": {
-            "campaign_id_empty": "#890F02",
-            "errors_campaign_id_empty{group=\"th\",instance=\"52.220.98.67:50316\",job=\"cheese-reporter\",name=\"reporter\"}": "#890F02"
-          },
-          "bars": false,
-          "datasource": null,
-          "fill": 1,
-          "id": 9,
-          "legend": {
-            "avg": false,
-            "current": true,
-            "hideEmpty": true,
-            "hideZero": true,
-            "max": true,
-            "min": false,
-            "show": true,
-            "total": false,
-            "values": true
-          },
-          "lines": true,
-          "linewidth": 1,
-          "links": [],
-          "nullPointMode": "null",
-          "percentage": false,
-          "pointradius": 5,
-          "points": false,
-          "renderer": "flot",
-          "seriesOverrides": [],
-          "span": 12,
-          "stack": false,
-          "steppedLine": false,
-          "targets": [
-            {
-              "expr": "reporter_breathe_duration_seconds",
-              "intervalFactor": 2,
-              "legendFormat": "breathe sec {{ quantile }}",
-              "metric": "reporter_breathe_duration_seconds",
-              "refId": "B",
-              "step": 20
-            },
-            {
-              "expr": "reporter_send_duration_seconds",
-              "intervalFactor": 2,
-              "legendFormat": "duration sec {{ quantile }}",
-              "metric": "reporter_send_duration_seconds",
-              "refId": "A",
-              "step": 20
-            }
-          ],
-          "thresholds": [],
-          "timeFrom": null,
-          "timeShift": null,
-          "title": "Reporter Time Processing",
-          "tooltip": {
-            "shared": true,
-            "sort": 0,
-            "value_type": "individual"
-          },
-          "type": "graph",
-          "xaxis": {
-            "mode": "time",
-            "name": null,
-            "show": true,
-            "values": []
-          },
-          "yaxes": [
-            {
-              "format": "s",
-              "label": null,
-              "logBase": 1,
-              "max": null,
-              "min": null,
-              "show": true
-            },
-            {
-              "format": "short",
-              "label": null,
-              "logBase": 1,
-              "max": null,
-              "min": null,
-              "show": true
-            }
-          ]
-        }
-      ],
-      "repeat": null,
-      "repeatIteration": null,
-      "repeatRowId": null,
-      "showTitle": false,
-      "title": "Dashboard Row",
-      "titleSize": "h6"
     }
   ],
   "schemaVersion": 14,
@@ -1215,5 +1022,5 @@
   },
   "timezone": "browser",
   "title": "Cheese",
-  "version": 45
+  "version": 51
 }
