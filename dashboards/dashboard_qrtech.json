@@ -1,16 +1,17 @@
 {
-  "id": 18,
-  "title": "QRTech",
-  "tags": [],
-  "style": "dark",
-  "timezone": "browser",
+  "annotations": {
+    "list": []
+  },
   "editable": true,
+  "gnetId": null,
+  "graphTooltip": 0,
   "hideControls": false,
-  "sharedCrosshair": false,
+  "id": 18,
+  "links": [],
+  "refresh": "1m",
   "rows": [
     {
       "collapse": false,
-      "editable": true,
       "height": "250px",
       "panels": [
         {
@@ -35,7 +36,6 @@
           },
           "id": 9,
           "interval": null,
-          "isNew": true,
           "links": [],
           "mappingType": 1,
           "mappingTypes": [
@@ -79,18 +79,22 @@
             }
           ],
           "thresholds": "1",
-          "title": "MT API OK",
+          "title": "QRTech MT API OK",
           "type": "singlestat",
           "valueFontSize": "80%",
           "valueMaps": [],
           "valueName": "current"
         }
       ],
-      "title": "New row"
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "New row",
+      "titleSize": "h6"
     },
     {
       "collapse": false,
-      "editable": true,
       "height": "250px",
       "panels": [
         {
@@ -107,14 +111,8 @@
           "editable": true,
           "error": false,
           "fill": 1,
-          "grid": {
-            "threshold1": null,
-            "threshold1Color": "rgba(216, 200, 27, 0.27)",
-            "threshold2": null,
-            "threshold2Color": "rgba(234, 112, 112, 0.22)"
-          },
+          "grid": {},
           "id": 1,
-          "isNew": true,
           "legend": {
             "avg": false,
             "current": true,
@@ -156,6 +154,7 @@
               "step": 40
             }
           ],
+          "thresholds": [],
           "timeFrom": null,
           "timeShift": null,
           "title": "AIS",
@@ -167,7 +166,10 @@
           },
           "type": "graph",
           "xaxis": {
-            "show": true
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
           },
           "yaxes": [
             {
@@ -202,14 +204,8 @@
           "editable": true,
           "error": false,
           "fill": 1,
-          "grid": {
-            "threshold1": null,
-            "threshold1Color": "rgba(216, 200, 27, 0.27)",
-            "threshold2": null,
-            "threshold2Color": "rgba(234, 112, 112, 0.22)"
-          },
+          "grid": {},
           "id": 2,
-          "isNew": true,
           "legend": {
             "avg": false,
             "current": true,
@@ -251,6 +247,7 @@
               "step": 40
             }
           ],
+          "thresholds": [],
           "timeFrom": null,
           "timeShift": null,
           "title": "DTAC",
@@ -262,7 +259,10 @@
           },
           "type": "graph",
           "xaxis": {
-            "show": true
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
           },
           "yaxes": [
             {
@@ -297,14 +297,8 @@
           "editable": true,
           "error": false,
           "fill": 1,
-          "grid": {
-            "threshold1": null,
-            "threshold1Color": "rgba(216, 200, 27, 0.27)",
-            "threshold2": null,
-            "threshold2Color": "rgba(234, 112, 112, 0.22)"
-          },
+          "grid": {},
           "id": 3,
-          "isNew": true,
           "legend": {
             "avg": false,
             "current": true,
@@ -346,6 +340,7 @@
               "step": 40
             }
           ],
+          "thresholds": [],
           "timeFrom": null,
           "timeShift": null,
           "title": "TRUEH",
@@ -357,7 +352,10 @@
           },
           "type": "graph",
           "xaxis": {
-            "show": true
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
           },
           "yaxes": [
             {
@@ -398,14 +396,8 @@
           "editable": true,
           "error": false,
           "fill": 1,
-          "grid": {
-            "threshold1": null,
-            "threshold1Color": "rgba(216, 200, 27, 0.27)",
-            "threshold2": null,
-            "threshold2Color": "rgba(234, 112, 112, 0.22)"
-          },
+          "grid": {},
           "id": 4,
-          "isNew": true,
           "legend": {
             "avg": false,
             "current": true,
@@ -439,7 +431,7 @@
               "step": 20
             },
             {
-              "expr": "errors{group=\"qrtech\", job=\"qrtech-telco\"}",
+              "expr": "errors{job=\"qrtech-telco\"}",
               "intervalFactor": 2,
               "legendFormat": "errors",
               "metric": "errors",
@@ -447,7 +439,7 @@
               "step": 20
             },
             {
-              "expr": "qrtech_adsent_parameter{group=\"qrtech\"}",
+              "expr": "qrtech_adsent_parameter{op=\"qrtech\"}",
               "interval": "",
               "intervalFactor": 2,
               "legendFormat": "absent parameters",
@@ -456,7 +448,7 @@
               "step": 20
             },
             {
-              "expr": "qrtech_404_page_not_found{group=\"qrtech\"}",
+              "expr": "qrtech_404_page_not_found{op=\"qrtech\"}",
               "intervalFactor": 2,
               "legendFormat": "404 page",
               "metric": "qrtech_404_page_not_found",
@@ -464,7 +456,7 @@
               "step": 20
             },
             {
-              "expr": "dropped{group=\"qrtech\"}",
+              "expr": "dropped{op=\"qrtech\"}",
               "intervalFactor": 2,
               "legendFormat": "dropped",
               "metric": "dropped",
@@ -472,7 +464,7 @@
               "step": 20
             },
             {
-              "expr": "empty{group=\"qrtech\"}",
+              "expr": "empty{op=\"qrtech\"}",
               "intervalFactor": 2,
               "legendFormat": "empty",
               "metric": "empty",
@@ -480,7 +472,7 @@
               "step": 20
             },
             {
-              "expr": "qrtech_notify_errors{group=\"qrtech\"}",
+              "expr": "qrtech_notify_errors{op=\"qrtech\"}",
               "intervalFactor": 2,
               "legendFormat": "notify errors",
               "metric": "qrtech_notify_errors",
@@ -488,7 +480,7 @@
               "step": 20
             },
             {
-              "expr": "qrtech_mo_parse_time_errors{group=\"qrtech\"}",
+              "expr": "qrtech_mo_parse_time_errors{op=\"qrtech\"}",
               "intervalFactor": 2,
               "legendFormat": "parse time erros",
               "metric": "qrtech_mo_parse_time_errors",
@@ -496,7 +488,7 @@
               "step": 20
             },
             {
-              "expr": "qrtech_mo_wrong_service_key{group=\"qrtech\"}",
+              "expr": "qrtech_mo_wrong_service_key{op=\"qrtech\"}",
               "interval": "",
               "intervalFactor": 2,
               "legendFormat": "wrong service key",
@@ -505,7 +497,7 @@
               "step": 20
             },
             {
-              "expr": "qrtech_unknown_operator{group=\"qrtech\"}",
+              "expr": "qrtech_unknown_operator{op=\"qrtech\"}",
               "intervalFactor": 2,
               "legendFormat": "unknown operator",
               "metric": "qrtech_unknown_operator",
@@ -520,6 +512,7 @@
               "step": 20
             }
           ],
+          "thresholds": [],
           "timeFrom": null,
           "timeShift": null,
           "title": "Incoming Traffic Okayness",
@@ -531,7 +524,10 @@
           },
           "type": "graph",
           "xaxis": {
-            "show": true
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
           },
           "yaxes": [
             {
@@ -553,11 +549,15 @@
           ]
         }
       ],
-      "title": "Row"
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Row",
+      "titleSize": "h6"
     },
     {
       "collapse": false,
-      "editable": true,
       "height": "250px",
       "panels": [
         {
@@ -572,14 +572,8 @@
           "editable": true,
           "error": false,
           "fill": 1,
-          "grid": {
-            "threshold1": null,
-            "threshold1Color": "rgba(216, 200, 27, 0.27)",
-            "threshold2": null,
-            "threshold2Color": "rgba(234, 112, 112, 0.22)"
-          },
+          "grid": {},
           "id": 5,
-          "isNew": true,
           "legend": {
             "avg": false,
             "current": true,
@@ -605,31 +599,31 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "mt_manager_qrtech_mo_dropped",
+              "expr": "mt_qrtech_mo_dropped",
               "intervalFactor": 2,
               "legendFormat": "mo dropped",
-              "metric": "mt_manager_qrtech_mo_dropped",
+              "metric": "mt_qrtech_mo_dropped",
               "refId": "A",
               "step": 30
             },
             {
-              "expr": "mt_manager_qrtech_add_to_db_success",
+              "expr": "mt_qrtech_add_to_db_success",
               "intervalFactor": 2,
               "legendFormat": "add new mo",
-              "metric": "mt_manager_qrtech_add_to_db_success",
+              "metric": "mt_qrtech_add_to_db_success",
               "refId": "B",
               "step": 30
             },
             {
-              "expr": "mt_manager_qrtech_add_to_db_errors",
+              "expr": "mt_qrtech_add_to_db_errors",
               "intervalFactor": 2,
               "legendFormat": "mo erorrs",
-              "metric": "mt_manager_qrtech_add_to_db_errors",
+              "metric": "mt_qrtech_add_to_db_errors",
               "refId": "C",
               "step": 30
             },
             {
-              "expr": "warnings{group=\"qrtech\"}",
+              "expr": "warnings{op=\"qrtech\"}",
               "intervalFactor": 2,
               "legendFormat": "warnings",
               "metric": "warnings",
@@ -637,6 +631,7 @@
               "step": 30
             }
           ],
+          "thresholds": [],
           "timeFrom": null,
           "timeShift": null,
           "title": "New MO (mt manager)",
@@ -648,7 +643,10 @@
           },
           "type": "graph",
           "xaxis": {
-            "show": true
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
           },
           "yaxes": [
             {
@@ -682,14 +680,8 @@
           "editable": true,
           "error": false,
           "fill": 1,
-          "grid": {
-            "threshold1": null,
-            "threshold1Color": "rgba(216, 200, 27, 0.27)",
-            "threshold2": null,
-            "threshold2Color": "rgba(234, 112, 112, 0.22)"
-          },
+          "grid": {},
           "id": 10,
-          "isNew": true,
           "legend": {
             "avg": false,
             "current": true,
@@ -715,30 +707,31 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "mt_manager_qrtech_dn_dropped",
+              "expr": "mt_qrtech_dn_dropped",
               "intervalFactor": 2,
               "legendFormat": "dn dropped",
-              "metric": "mt_manager_qrtech_dn_dropped",
+              "metric": "mt_qrtech_dn_dropped",
               "refId": "A",
               "step": 30
             },
             {
-              "expr": "mt_manager_qrtech_dn_errors",
+              "expr": "mt_qrtech_dn_errors",
               "intervalFactor": 2,
               "legendFormat": "dn errors",
-              "metric": "mt_manager_qrtech_dn_errors",
+              "metric": "mt_qrtech_dn_errors",
               "refId": "B",
               "step": 30
             },
             {
-              "expr": "mt_manager_qrtech_dn_success",
+              "expr": "m_qrtech_dn_success",
               "intervalFactor": 2,
               "legendFormat": "dn successs",
-              "metric": "mt_manager_qrtech_dn_success",
+              "metric": "m_qrtech_dn_success",
               "refId": "C",
               "step": 30
             }
           ],
+          "thresholds": [],
           "timeFrom": null,
           "timeShift": null,
           "title": "DN (mt manager)",
@@ -750,7 +743,10 @@
           },
           "type": "graph",
           "xaxis": {
-            "show": true
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
           },
           "yaxes": [
             {
@@ -772,11 +768,15 @@
           ]
         }
       ],
-      "title": "New row"
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "New row",
+      "titleSize": "h6"
     },
     {
       "collapse": false,
-      "editable": true,
       "height": "250px",
       "panels": [
         {
@@ -788,14 +788,8 @@
           "editable": true,
           "error": false,
           "fill": 1,
-          "grid": {
-            "threshold1": null,
-            "threshold1Color": "rgba(216, 200, 27, 0.27)",
-            "threshold2": null,
-            "threshold2Color": "rgba(234, 112, 112, 0.22)"
-          },
+          "grid": {},
           "id": 7,
-          "isNew": true,
           "legend": {
             "avg": false,
             "current": true,
@@ -821,7 +815,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "dispatcherd_campaign_access{group=\"qrtech\"}",
+              "expr": "dispatcherd_campaign_access{op=\"qrtech\"}",
               "intervalFactor": 2,
               "legendFormat": "access campaign",
               "metric": "dispatcherd_campaign_access",
@@ -829,7 +823,7 @@
               "step": 20
             },
             {
-              "expr": "dispatcherd_error404{group=\"qrtech\"}",
+              "expr": "dispatcherd_error404{op=\"qrtech\"}",
               "intervalFactor": 2,
               "legendFormat": "404 error",
               "metric": "dispatcherd_error404",
@@ -837,7 +831,7 @@
               "step": 20
             },
             {
-              "expr": "dispatcherd_incoming{group=\"qrtech\"}",
+              "expr": "dispatcherd_incoming{op=\"qrtech\"}",
               "intervalFactor": 2,
               "legendFormat": "incoming",
               "metric": "dispatcherd_incoming",
@@ -845,6 +839,7 @@
               "step": 20
             }
           ],
+          "thresholds": [],
           "timeFrom": null,
           "timeShift": null,
           "title": "Dispatcher",
@@ -856,7 +851,10 @@
           },
           "type": "graph",
           "xaxis": {
-            "show": true
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
           },
           "yaxes": [
             {
@@ -878,11 +876,15 @@
           ]
         }
       ],
-      "title": "New row"
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "New row",
+      "titleSize": "h6"
     },
     {
       "collapse": false,
-      "editable": true,
       "height": "250px",
       "panels": [
         {
@@ -905,14 +907,8 @@
           "editable": true,
           "error": false,
           "fill": 1,
-          "grid": {
-            "threshold1": null,
-            "threshold1Color": "rgba(216, 200, 27, 0.27)",
-            "threshold2": null,
-            "threshold2Color": "rgba(234, 112, 112, 0.22)"
-          },
+          "grid": {},
           "id": 8,
-          "isNew": true,
           "legend": {
             "avg": false,
             "current": true,
@@ -1037,6 +1033,7 @@
               "step": 20
             }
           ],
+          "thresholds": [],
           "timeFrom": null,
           "timeShift": null,
           "title": "API Delivery Notifications",
@@ -1048,7 +1045,10 @@
           },
           "type": "graph",
           "xaxis": {
-            "show": true
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
           },
           "yaxes": [
             {
@@ -1070,11 +1070,15 @@
           ]
         }
       ],
-      "title": "New row"
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "New row",
+      "titleSize": "h6"
     },
     {
       "collapse": false,
-      "editable": true,
       "height": "250px",
       "panels": [
         {
@@ -1087,14 +1091,8 @@
           "editable": true,
           "error": false,
           "fill": 1,
-          "grid": {
-            "threshold1": null,
-            "threshold1Color": "rgba(216, 200, 27, 0.27)",
-            "threshold2": null,
-            "threshold2Color": "rgba(234, 112, 112, 0.22)"
-          },
+          "grid": {},
           "id": 6,
-          "isNew": true,
           "legend": {
             "avg": false,
             "current": true,
@@ -1120,7 +1118,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "qlistener_operator_add_to_db_errors{group=\"qrtech\"}",
+              "expr": "qlistener_operator_add_to_db_errors{op=\"qrtech\"}",
               "intervalFactor": 2,
               "legendFormat": "errors",
               "metric": "qlistener_operator_add_to_db_errors",
@@ -1128,7 +1126,7 @@
               "step": 30
             },
             {
-              "expr": "qlistener_operator_add_to_db_success{group=\"qrtech\"}",
+              "expr": "qlistener_operator_add_to_db_success{op=\"qrtech\"}",
               "intervalFactor": 2,
               "legendFormat": "success",
               "metric": "qlistener_operator_add_to_db_success",
@@ -1136,6 +1134,7 @@
               "step": 30
             }
           ],
+          "thresholds": [],
           "timeFrom": null,
           "timeShift": null,
           "title": "Operator Transaction Log",
@@ -1147,7 +1146,10 @@
           },
           "type": "graph",
           "xaxis": {
-            "show": true
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
           },
           "yaxes": [
             {
@@ -1178,14 +1180,8 @@
           "editable": true,
           "error": false,
           "fill": 1,
-          "grid": {
-            "threshold1": null,
-            "threshold1Color": "rgba(216, 200, 27, 0.27)",
-            "threshold2": null,
-            "threshold2Color": "rgba(234, 112, 112, 0.22)"
-          },
+          "grid": {},
           "id": 11,
-          "isNew": true,
           "legend": {
             "avg": false,
             "current": true,
@@ -1211,7 +1207,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "qlistener_content_sent_add_to_db_errors{group=\"qrtech\"}",
+              "expr": "qlistener_content_sent_add_to_db_errors{op=\"qrtech\"}",
               "intervalFactor": 2,
               "legendFormat": "errors",
               "metric": "qlistener_content_sent_add_to_db_errors",
@@ -1219,7 +1215,7 @@
               "step": 30
             },
             {
-              "expr": "qlistener_content_sent_add_to_db_success{group=\"qrtech\"}",
+              "expr": "qlistener_content_sent_add_to_db_success{op=\"qrtech\"}",
               "intervalFactor": 2,
               "legendFormat": "success",
               "metric": "qlistener_content_sent_add_to_db_success",
@@ -1227,6 +1223,7 @@
               "step": 30
             }
           ],
+          "thresholds": [],
           "timeFrom": null,
           "timeShift": null,
           "title": "Content Sent",
@@ -1238,7 +1235,10 @@
           },
           "type": "graph",
           "xaxis": {
-            "show": true
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
           },
           "yaxes": [
             {
@@ -1269,14 +1269,8 @@
           "editable": true,
           "error": false,
           "fill": 1,
-          "grid": {
-            "threshold1": null,
-            "threshold1Color": "rgba(216, 200, 27, 0.27)",
-            "threshold2": null,
-            "threshold2Color": "rgba(234, 112, 112, 0.22)"
-          },
+          "grid": {},
           "id": 12,
-          "isNew": true,
           "legend": {
             "avg": false,
             "current": true,
@@ -1302,7 +1296,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "qlistener_pixel_add_to_db_errors{group=\"qrtech\"}",
+              "expr": "qlistener_pixel_add_to_db_errors{op=\"qrtech\"}",
               "intervalFactor": 2,
               "legendFormat": "errors",
               "metric": "qlistener_pixel_add_to_db_errors",
@@ -1310,7 +1304,7 @@
               "step": 30
             },
             {
-              "expr": "qlistener_pixel_add_to_db_success{group=\"qrtech\"}",
+              "expr": "qlistener_pixel_add_to_db_success{op=\"qrtech\"}",
               "intervalFactor": 2,
               "legendFormat": "success",
               "metric": "qlistener_pixel_add_to_db_success",
@@ -1318,6 +1312,7 @@
               "step": 30
             }
           ],
+          "thresholds": [],
           "timeFrom": null,
           "timeShift": null,
           "title": "Pixel",
@@ -1329,7 +1324,10 @@
           },
           "type": "graph",
           "xaxis": {
-            "show": true
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
           },
           "yaxes": [
             {
@@ -1361,14 +1359,8 @@
           "editable": true,
           "error": false,
           "fill": 1,
-          "grid": {
-            "threshold1": null,
-            "threshold1Color": "rgba(216, 200, 27, 0.27)",
-            "threshold2": null,
-            "threshold2Color": "rgba(234, 112, 112, 0.22)"
-          },
+          "grid": {},
           "id": 13,
-          "isNew": true,
           "legend": {
             "avg": false,
             "current": true,
@@ -1394,7 +1386,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "qlistener_mt_manager_add_to_db_errors{group=\"qrtech\"}",
+              "expr": "qlistener_mt_manager_add_to_db_errors{op=\"qrtech\"}",
               "intervalFactor": 2,
               "legendFormat": "errors",
               "metric": "qlistener_mt_manager_add_to_db_errors",
@@ -1402,7 +1394,7 @@
               "step": 30
             },
             {
-              "expr": "qlistener_mt_manager_add_to_db_success{group=\"qrtech\"}",
+              "expr": "qlistener_mt_manager_add_to_db_success{op=\"qrtech\"}",
               "intervalFactor": 2,
               "legendFormat": "success",
               "metric": "qlistener_mt_manager_add_to_db_success",
@@ -1410,7 +1402,7 @@
               "step": 30
             },
             {
-              "expr": "qlistener_mt_manager_dropped{group=\"qrtech\"}",
+              "expr": "qlistener_mt_manager_dropped{op=\"qrtech\"}",
               "intervalFactor": 2,
               "legendFormat": "dropped",
               "metric": "qlistener_mt_manager_dropped",
@@ -1418,7 +1410,7 @@
               "step": 30
             },
             {
-              "expr": "qlistener_mt_manager_empty{group=\"qrtech\"}",
+              "expr": "qlistener_mt_manager_empty{op=\"qrtech\"}",
               "intervalFactor": 2,
               "legendFormat": "empty",
               "metric": "qlistener_mt_manager_empty",
@@ -1426,6 +1418,7 @@
               "step": 30
             }
           ],
+          "thresholds": [],
           "timeFrom": null,
           "timeShift": null,
           "title": "MT Manager",
@@ -1437,7 +1430,10 @@
           },
           "type": "graph",
           "xaxis": {
-            "show": true
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
           },
           "yaxes": [
             {
@@ -1469,14 +1465,8 @@
           "editable": true,
           "error": false,
           "fill": 1,
-          "grid": {
-            "threshold1": null,
-            "threshold1Color": "rgba(216, 200, 27, 0.27)",
-            "threshold2": null,
-            "threshold2Color": "rgba(234, 112, 112, 0.22)"
-          },
+          "grid": {},
           "id": 14,
-          "isNew": true,
           "legend": {
             "avg": false,
             "current": true,
@@ -1502,7 +1492,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "qlistener_user_actions_add_to_db_errors{group=\"qrtech\"}",
+              "expr": "qlistener_user_actions_add_to_db_errors{op=\"qrtech\"}",
               "intervalFactor": 2,
               "legendFormat": "errors",
               "metric": "qlistener_user_actions_add_to_db_errors",
@@ -1510,7 +1500,7 @@
               "step": 30
             },
             {
-              "expr": "qlistener_user_actions_add_to_db_success{group=\"qrtech\"}",
+              "expr": "qlistener_user_actions_add_to_db_success{op=\"qrtech\"}",
               "intervalFactor": 2,
               "legendFormat": "success",
               "metric": "qlistener_user_actions_add_to_db_success",
@@ -1518,7 +1508,7 @@
               "step": 30
             },
             {
-              "expr": "qlistener_user_actions_dropped{group=\"qrtech\"}",
+              "expr": "qlistener_user_actions_dropped{op=\"qrtech\"}",
               "intervalFactor": 2,
               "legendFormat": "dropped",
               "metric": "qlistener_user_actions_dropped",
@@ -1526,7 +1516,7 @@
               "step": 30
             },
             {
-              "expr": "qlistener_user_actions_empty{group=\"qrtech\"}",
+              "expr": "qlistener_user_actions_empty{op=\"qrtech\"}",
               "intervalFactor": 2,
               "legendFormat": "empty",
               "metric": "qlistener_user_actions_empty",
@@ -1534,6 +1524,7 @@
               "step": 30
             }
           ],
+          "thresholds": [],
           "timeFrom": null,
           "timeShift": null,
           "title": "User Actions",
@@ -1545,7 +1536,10 @@
           },
           "type": "graph",
           "xaxis": {
-            "show": true
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
           },
           "yaxes": [
             {
@@ -1577,14 +1571,8 @@
           "editable": true,
           "error": false,
           "fill": 1,
-          "grid": {
-            "threshold1": null,
-            "threshold1Color": "rgba(216, 200, 27, 0.27)",
-            "threshold2": null,
-            "threshold2Color": "rgba(234, 112, 112, 0.22)"
-          },
+          "grid": {},
           "id": 15,
-          "isNew": true,
           "legend": {
             "avg": false,
             "current": true,
@@ -1610,7 +1598,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "qlistener_access_campaign_add_to_db_errors{group=\"qrtech\"}",
+              "expr": "qlistener_access_campaign_add_to_db_errors{op=\"qrtech\"}",
               "intervalFactor": 2,
               "legendFormat": "errors",
               "metric": "qlistener_access_campaign_add_to_db_errors",
@@ -1618,7 +1606,7 @@
               "step": 30
             },
             {
-              "expr": "qlistener_access_campaign_add_to_db_success{group=\"qrtech\"}",
+              "expr": "qlistener_access_campaign_add_to_db_success{op=\"qrtech\"}",
               "intervalFactor": 2,
               "legendFormat": "success",
               "metric": "qlistener_access_campaign_add_to_db_success",
@@ -1626,7 +1614,7 @@
               "step": 30
             },
             {
-              "expr": "qlistener_access_campaign_dropped{group=\"qrtech\"}",
+              "expr": "qlistener_access_campaign_dropped{op=\"qrtech\"}",
               "intervalFactor": 2,
               "legendFormat": "dropped",
               "metric": "qlistener_access_campaign_dropped",
@@ -1634,7 +1622,7 @@
               "step": 30
             },
             {
-              "expr": "qlistener_access_campaign_empty{group=\"qrtech\"}",
+              "expr": "qlistener_access_campaign_empty{op=\"qrtech\"}",
               "intervalFactor": 2,
               "legendFormat": "empty",
               "metric": "qlistener_access_campaign_empty",
@@ -1642,6 +1630,7 @@
               "step": 30
             }
           ],
+          "thresholds": [],
           "timeFrom": null,
           "timeShift": null,
           "title": "Access Campaign",
@@ -1653,7 +1642,10 @@
           },
           "type": "graph",
           "xaxis": {
-            "show": true
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
           },
           "yaxes": [
             {
@@ -1675,9 +1667,20 @@
           ]
         }
       ],
-      "title": "New row"
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "New row",
+      "titleSize": "h6"
     }
   ],
+  "schemaVersion": 14,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": []
+  },
   "time": {
     "from": "now-3h",
     "to": "now"
@@ -1707,15 +1710,7 @@
       "30d"
     ]
   },
-  "templating": {
-    "list": []
-  },
-  "annotations": {
-    "list": []
-  },
-  "refresh": "1m",
-  "schemaVersion": 12,
-  "version": 19,
-  "links": [],
-  "gnetId": null
+  "timezone": "browser",
+  "title": "QRTech",
+  "version": 21
 }
