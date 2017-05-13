@@ -1051,10 +1051,10 @@
           },
           "targets": [
             {
-              "expr": "operator_load_headers_error{ op=\"mobilink\"}",
+              "expr": "inmem_operator_load_headers_error{ op=\"mobilink\"}",
               "intervalFactor": 2,
               "legendFormat": "load operators headers",
-              "metric": "operator_load_headers_error",
+              "metric": "inmem_operator_load_headers_error",
               "refId": "A",
               "step": 2
             }
@@ -1145,9 +1145,9 @@
           },
           "targets": [
             {
-              "expr": "campaign_load_error{ op=\"mobilink\" }",
+              "expr": "inmem_campaign_load_error{ op=\"mobilink\" }",
               "intervalFactor": 2,
-              "metric": "campaign_load_error",
+              "metric": "inmem_campaign_load_error",
               "refId": "A",
               "step": 2
             }
@@ -1482,7 +1482,7 @@
           "thresholds": [],
           "timeFrom": null,
           "timeShift": null,
-          "title": "InMemory",
+          "title": "InMemory Requests Per Minute",
           "tooltip": {
             "msResolution": false,
             "shared": true,
@@ -1831,7 +1831,7 @@
           },
           "yaxes": [
             {
-              "format": "short",
+              "format": "s",
               "label": null,
               "logBase": 1,
               "max": null,
@@ -2028,11 +2028,11 @@
           "grid": {},
           "id": 4,
           "legend": {
-            "avg": true,
+            "avg": false,
             "current": true,
             "hideEmpty": true,
             "hideZero": true,
-            "max": true,
+            "max": false,
             "min": false,
             "show": true,
             "total": false,
@@ -2079,7 +2079,7 @@
               "expr": "mt_not_paid_status_mt_postpaid{ op=\"mobilink\"}",
               "intervalFactor": 2,
               "legendFormat": "postpaid",
-              "metric": "",
+              "metric": "mt_not_paid_status_mt_postpaid",
               "refId": "D",
               "step": 30
             },
@@ -2277,6 +2277,7 @@
       "panels": [
         {
           "aliasColors": {
+            "404": "#C15C17",
             "agree success": "#629E51",
             "agreed": "#64B0C8",
             "content delivery errors": "#BF1B00",
@@ -2300,7 +2301,7 @@
             "mumbai_dispatcherd_incoming_msisdn_not_found{group=\"mumbai\",instance=\"52.66.23.201:50300\",job=\"dispatcherd\"}": "#BF1B00",
             "mumbai_dispatcherd_incoming_not_supported{group=\"mumbai\",instance=\"52.66.23.201:50300\",job=\"dispatcherd\"}": "#C15C17",
             "overall": "#B7DBAB",
-            "page not found": "#890F02",
+            "page not found": "#C15C17",
             "rejected": "#E5AC0E",
             "success": "#508642"
           },
@@ -2410,7 +2411,7 @@
             {
               "expr": "dispatcherd_error404{op=\"mobilink\"}",
               "intervalFactor": 2,
-              "legendFormat": "page not found",
+              "legendFormat": "404",
               "metric": "dispatcherd_error404",
               "refId": "K",
               "step": 30
@@ -2451,7 +2452,7 @@
           "thresholds": [],
           "timeFrom": null,
           "timeShift": null,
-          "title": "Diapatcherd",
+          "title": "Diapatcherd Hits",
           "tooltip": {
             "msResolution": false,
             "shared": true,
@@ -2472,7 +2473,7 @@
               "logBase": 1,
               "max": null,
               "min": null,
-              "show": false
+              "show": true
             },
             {
               "format": "short",
@@ -2625,7 +2626,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "qlistener_mt_manager_add_to_db_errors{group=\"pk\"}",
+              "expr": "qlistener_mt_manager_add_to_db_errors{op=\"mobilink\"}",
               "intervalFactor": 2,
               "legendFormat": "mt manager db errors",
               "metric": "qlistener_mt_manager_add_to_db_errors",
@@ -2633,7 +2634,7 @@
               "step": 30
             },
             {
-              "expr": "qlistener_mt_manager_add_to_db_success{group=\"pk\"}",
+              "expr": "qlistener_mt_manager_add_to_db_success{op=\"mobilink\"}",
               "intervalFactor": 2,
               "legendFormat": "mt manager db success",
               "metric": "qlistener_mt_manager_add_to_db_success",
@@ -2641,7 +2642,7 @@
               "step": 30
             },
             {
-              "expr": "qlistener_mt_manager_dropped",
+              "expr": "qlistener_mt_manager_dropped{op=\"mobilink\"}",
               "intervalFactor": 2,
               "legendFormat": "dropped",
               "metric": "qlistener_mt_manager_dropped",
@@ -2649,7 +2650,7 @@
               "step": 30
             },
             {
-              "expr": "qlistener_mt_manager_empty",
+              "expr": "qlistener_mt_manager_empty{op=\"mobilink\"}",
               "intervalFactor": 2,
               "legendFormat": "empty",
               "metric": "qlistener_mt_manager_empty",
@@ -2695,7 +2696,17 @@
         },
         {
           "aliasColors": {
-            "errors inmem": "#890F02"
+            "db_errors{country=\"pk\",instance=\"52.66.23.201:50302\",job=\"mobilink-contentd\",name=\"contentd\",op=\"mobilink\"}": "#890F02",
+            "db_errors{country=\"pk\",instance=\"52.66.23.201:50303\",job=\"mobilink-jobs\",name=\"jobs\",op=\"mobilink\"}": "#890F02",
+            "db_errors{country=\"pk\",instance=\"52.66.23.201:50304\",job=\"mobilink-qlistener\",name=\"qlistener\",op=\"mobilink\"}": "#890F02",
+            "dropped mobilink-telco": "#890F02",
+            "empty mobilink-telco": "#890F02",
+            "errors inmem": "#890F02",
+            "errors mobilink-dispatcherd": "#890F02",
+            "errors mobilink-inmem": "#890F02",
+            "errors mobilink-jobs": "#890F02",
+            "errors mobilink-reporter": "#890F02",
+            "errors mobilink-telco": "#890F02"
           },
           "bars": false,
           "datasource": null,
@@ -2707,11 +2718,11 @@
           "legend": {
             "avg": false,
             "current": true,
-            "hideEmpty": true,
-            "hideZero": true,
+            "hideEmpty": false,
+            "hideZero": false,
             "max": true,
             "min": false,
-            "show": false,
+            "show": true,
             "total": false,
             "values": true
           },
@@ -2750,6 +2761,13 @@
               "legendFormat": "empty {{job}}",
               "metric": "empty",
               "refId": "C",
+              "step": 30
+            },
+            {
+              "expr": "db_errors{op=\"mobilink\"}",
+              "intervalFactor": 2,
+              "metric": "db_errors",
+              "refId": "D",
               "step": 30
             }
           ],
@@ -2848,7 +2866,7 @@
           "thresholds": [],
           "timeFrom": null,
           "timeShift": null,
-          "title": "Dispatcher Response Time",
+          "title": "Services Response Time",
           "tooltip": {
             "msResolution": false,
             "shared": true,
@@ -2893,7 +2911,7 @@
           "grid": {},
           "id": 25,
           "legend": {
-            "avg": true,
+            "avg": false,
             "current": true,
             "hideEmpty": true,
             "hideZero": true,
@@ -2943,6 +2961,7 @@
             {
               "expr": "mt_mobilink_add_to_db_errors{ op=\"mobilink\"}",
               "intervalFactor": 2,
+              "legendFormat": "db errors",
               "metric": "mt_manager_mobilink_add_to_db_errors",
               "refId": "D",
               "step": 30
@@ -2994,6 +3013,7 @@
         {
           "aliasColors": {
             "add to db success": "#7EB26D",
+            "db errors": "#890F02",
             "geoip errors": "#E24D42",
             "mumbai_qlistener_access_campaign_dropped{group=\"mumbai\",instance=\"52.66.23.201:50304\",job=\"qlistener\"}": "#890F02",
             "mumbai_qlistener_access_campaign_unknown_hash{group=\"mumbai\",instance=\"52.66.23.201:50304\",job=\"qlistener\"}": "#BF1B00",
@@ -3104,7 +3124,7 @@
               "logBase": 1,
               "max": null,
               "min": null,
-              "show": false
+              "show": true
             },
             {
               "format": "short",
@@ -3179,7 +3199,7 @@
           "thresholds": [],
           "timeFrom": null,
           "timeShift": null,
-          "title": "Channel",
+          "title": "Channel API (Eka's requests)",
           "tooltip": {
             "msResolution": false,
             "shared": true,
@@ -3834,7 +3854,12 @@
       "height": "250px",
       "panels": [
         {
-          "aliasColors": {},
+          "aliasColors": {
+            "get periodics  0.9": "#7EB26D",
+            "get periodics  0.99": "#B7DBAB",
+            "process periodics 0.5": "#447EBC",
+            "process periodics 0.9": "#0A437C"
+          },
           "bars": false,
           "datasource": null,
           "editable": true,
@@ -3964,10 +3989,10 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "retries_count{group=\"pk\"}",
+              "expr": "get_content_duration_seconds{op=\"mobilink\"}",
               "intervalFactor": 2,
-              "legendFormat": "retries count",
-              "metric": "retries_count",
+              "legendFormat": "get content",
+              "metric": "get_content_duration_seconds",
               "refId": "A",
               "step": 30
             }
@@ -3975,7 +4000,7 @@
           "thresholds": [],
           "timeFrom": null,
           "timeShift": null,
-          "title": "Periodics Count",
+          "title": "Get Content duration",
           "tooltip": {
             "msResolution": false,
             "shared": true,
@@ -3991,85 +4016,7 @@
           },
           "yaxes": [
             {
-              "format": "short",
-              "label": null,
-              "logBase": 1,
-              "max": null,
-              "min": null,
-              "show": true
-            },
-            {
-              "format": "short",
-              "label": null,
-              "logBase": 1,
-              "max": null,
-              "min": null,
-              "show": true
-            }
-          ]
-        },
-        {
-          "aliasColors": {
-            "expired retries count": "#3F6833"
-          },
-          "bars": false,
-          "datasource": null,
-          "editable": true,
-          "error": false,
-          "fill": 1,
-          "grid": {},
-          "id": 52,
-          "legend": {
-            "avg": false,
-            "current": true,
-            "max": false,
-            "min": false,
-            "show": true,
-            "total": false,
-            "values": true
-          },
-          "lines": true,
-          "linewidth": 2,
-          "links": [],
-          "nullPointMode": "connected",
-          "percentage": false,
-          "pointradius": 5,
-          "points": false,
-          "renderer": "flot",
-          "seriesOverrides": [],
-          "span": 6,
-          "stack": false,
-          "steppedLine": false,
-          "targets": [
-            {
-              "expr": "retries_expired_count{group=\"pk\"}",
-              "intervalFactor": 2,
-              "legendFormat": "expired retries count",
-              "metric": "retries_expired_count",
-              "refId": "A",
-              "step": 30
-            }
-          ],
-          "thresholds": [],
-          "timeFrom": null,
-          "timeShift": null,
-          "title": "Expired Retries Count",
-          "tooltip": {
-            "msResolution": false,
-            "shared": true,
-            "sort": 0,
-            "value_type": "cumulative"
-          },
-          "type": "graph",
-          "xaxis": {
-            "mode": "time",
-            "name": null,
-            "show": true,
-            "values": []
-          },
-          "yaxes": [
-            {
-              "format": "short",
+              "format": "s",
               "label": null,
               "logBase": 1,
               "max": null,
@@ -4132,5 +4079,5 @@
   },
   "timezone": "utc",
   "title": "Mobilink",
-  "version": 74
+  "version": 83
 }
