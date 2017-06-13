@@ -9,11 +9,11 @@ import (
 	"strconv"
 	"strings"
 
-	log "github.com/Sirupsen/logrus"
 	"github.com/gin-gonic/gin"
 	"github.com/gin-gonic/gin/binding"
 	"github.com/go-telegram-bot-api/telegram-bot-api"
 	"github.com/jinzhu/configor"
+	log "github.com/sirupsen/logrus"
 )
 
 var bot *tgbotapi.BotAPI
