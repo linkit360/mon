@@ -55,7 +55,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "telco_ais_success",
+              "expr": "cheese_ais_success",
               "intervalFactor": 2,
               "legendFormat": "ais",
               "metric": "telco_ais_success",
@@ -63,7 +63,7 @@
               "step": 40
             },
             {
-              "expr": "telco_ais_errors",
+              "expr": "cheese_ais_errors",
               "intervalFactor": 2,
               "legendFormat": "ais errors",
               "metric": "telco_ais_errors",
@@ -81,6 +81,7 @@
             "sort": 0,
             "value_type": "cumulative"
           },
+          "transparent": true,
           "type": "graph",
           "xaxis": {
             "mode": "time",
@@ -148,7 +149,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "telco_dtac_success",
+              "expr": "cheese_dtac_success",
               "intervalFactor": 2,
               "legendFormat": "dtac",
               "metric": "telco_dtac_success",
@@ -156,7 +157,7 @@
               "step": 40
             },
             {
-              "expr": "telco_dtac_errors",
+              "expr": "cheese_dtac_errors",
               "intervalFactor": 2,
               "legendFormat": "dtac errors",
               "metric": "telco_dtac_errors",
@@ -174,6 +175,7 @@
             "sort": 0,
             "value_type": "cumulative"
           },
+          "transparent": true,
           "type": "graph",
           "xaxis": {
             "mode": "time",
@@ -241,7 +243,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "telco_trueh_success",
+              "expr": "cheese_trueh_success",
               "intervalFactor": 2,
               "legendFormat": "trueh",
               "metric": "telco_trueh_success",
@@ -249,7 +251,7 @@
               "step": 40
             },
             {
-              "expr": "telco_trueh_errors",
+              "expr": "cheese_trueh_errors",
               "intervalFactor": 2,
               "legendFormat": "trueh errors",
               "metric": "telco_trueh_errors",
@@ -267,6 +269,7 @@
             "sort": 0,
             "value_type": "cumulative"
           },
+          "transparent": true,
           "type": "graph",
           "xaxis": {
             "mode": "time",
@@ -336,7 +339,7 @@
           "points": false,
           "renderer": "flot",
           "seriesOverrides": [],
-          "span": 12,
+          "span": 6,
           "stack": false,
           "steppedLine": false,
           "targets": [
@@ -346,7 +349,7 @@
               "legendFormat": "success",
               "metric": "success",
               "refId": "A",
-              "step": 20
+              "step": 30
             },
             {
               "expr": "errors{job=\"cheese-telco\"}",
@@ -354,24 +357,24 @@
               "legendFormat": "errors",
               "metric": "errors",
               "refId": "B",
-              "step": 20
+              "step": 30
             },
             {
-              "expr": "telco_adsent_parameter{job=\"cheese-telco\"}",
+              "expr": "cheese_adsent_parameter{job=\"cheese-telco\"}",
               "interval": "",
               "intervalFactor": 2,
               "legendFormat": "absent parameters",
               "metric": "telco_adsent_parameter",
               "refId": "C",
-              "step": 20
+              "step": 30
             },
             {
-              "expr": "telco_404_page_not_found{job=\"cheese-telco\"}",
+              "expr": "cheese_404_page_not_found{job=\"cheese-telco\"}",
               "intervalFactor": 2,
               "legendFormat": "404 page",
               "metric": "telco_404_page_not_found",
               "refId": "D",
-              "step": 20
+              "step": 30
             },
             {
               "expr": "dropped{op=\"cheese\"}",
@@ -379,7 +382,7 @@
               "legendFormat": "dropped",
               "metric": "dropped",
               "refId": "E",
-              "step": 20
+              "step": 30
             },
             {
               "expr": "empty{op=\"cheese\"}",
@@ -387,52 +390,53 @@
               "legendFormat": "empty",
               "metric": "empty",
               "refId": "F",
-              "step": 20
+              "step": 30
             },
             {
-              "expr": "telco_notify_errors{op=\"cheese\"}",
+              "expr": "cheese_notify_errors{op=\"cheese\"}",
               "intervalFactor": 2,
               "legendFormat": "notify errors",
               "metric": "telco_notify_errors",
               "refId": "G",
-              "step": 20
+              "step": 30
             },
             {
-              "expr": "telco_mo_parse_time_errors{op=\"cheese\"}",
+              "expr": "cheese_mo_parse_time_errors{op=\"cheese\"}",
               "intervalFactor": 2,
               "legendFormat": "parse time erros",
               "metric": "telco_mo_parse_time_errors",
               "refId": "H",
-              "step": 20
+              "step": 30
             },
             {
-              "expr": "telco_mo_wrong_service_key{op=\"cheese\"}",
+              "expr": "cheese_mo_wrong_service_key{op=\"cheese\"}",
               "interval": "",
               "intervalFactor": 2,
               "legendFormat": "wrong service key",
               "metric": "telco_mo_wrong_service_key",
               "refId": "I",
-              "step": 20
+              "step": 30
             },
             {
-              "expr": "telco_unknown_operator{op=\"cheese\"}",
+              "expr": "cheese_unknown_operator{op=\"cheese\"}",
               "intervalFactor": 2,
               "legendFormat": "unknown operator",
               "metric": "telco_unknown_operator",
               "refId": "J",
-              "step": 20
+              "step": 30
             }
           ],
           "thresholds": [],
           "timeFrom": null,
           "timeShift": null,
-          "title": "Incoming Traffic Okayness",
+          "title": "Telco trafic",
           "tooltip": {
             "msResolution": false,
             "shared": true,
             "sort": 0,
             "value_type": "cumulative"
           },
+          "transparent": true,
           "type": "graph",
           "xaxis": {
             "mode": "time",
@@ -458,6 +462,232 @@
               "show": true
             }
           ]
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": null,
+          "decimals": 1,
+          "format": "s",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "id": 11,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 2,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "targets": [
+            {
+              "expr": "node_load15{op=\"cheese\"}",
+              "intervalFactor": 2,
+              "refId": "A",
+              "step": 240
+            }
+          ],
+          "thresholds": "",
+          "title": "Load15",
+          "transparent": true,
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": null,
+          "format": "bytes",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "id": 12,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 2,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "targets": [
+            {
+              "expr": "node_memory_MemFree{op=\"cheese\"}",
+              "intervalFactor": 2,
+              "refId": "A",
+              "step": 240
+            }
+          ],
+          "thresholds": "",
+          "title": "RAM Free",
+          "transparent": true,
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "avg"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": null,
+          "format": "bytes",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "id": 13,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 2,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "targets": [
+            {
+              "expr": "node_filesystem_free{device=\"/dev/xvda1\",op=\"cheese\"}",
+              "intervalFactor": 2,
+              "refId": "A",
+              "step": 240
+            }
+          ],
+          "thresholds": "",
+          "title": "Disk Space Free",
+          "transparent": true,
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "current"
         }
       ],
       "repeat": null,
@@ -476,7 +706,8 @@
             "add new mo": "#7EB26D",
             "mo dropped": "#BF1B00",
             "mo erorrs": "#BF1B00",
-            "unsubscribe": "#447EBC"
+            "unsubscribe": "#447EBC",
+            "warnings": "#EF843C"
           },
           "bars": false,
           "datasource": null,
@@ -534,7 +765,7 @@
               "step": 30
             },
             {
-              "expr": "warnings{country=\"th\"}",
+              "expr": "warnings{op=\"cheese\"}",
               "intervalFactor": 2,
               "legendFormat": "warnings",
               "metric": "warnings",
@@ -542,10 +773,10 @@
               "step": 30
             },
             {
-              "expr": "telco_unsubscribe{country=\"th\"}",
+              "expr": "cheese_unsubscribe{op=\"cheese\"}",
               "intervalFactor": 2,
               "legendFormat": "unsubscribe",
-              "metric": "telco_unsubscribe",
+              "metric": "cheese_unsubscribe",
               "refId": "E",
               "step": 30
             }
@@ -560,6 +791,7 @@
             "sort": 0,
             "value_type": "cumulative"
           },
+          "transparent": true,
           "type": "graph",
           "xaxis": {
             "mode": "time",
@@ -667,6 +899,7 @@
             "sort": 0,
             "value_type": "cumulative"
           },
+          "transparent": true,
           "type": "graph",
           "xaxis": {
             "mode": "time",
@@ -775,6 +1008,7 @@
             "sort": 0,
             "value_type": "cumulative"
           },
+          "transparent": true,
           "type": "graph",
           "xaxis": {
             "mode": "time",
@@ -840,7 +1074,7 @@
             "current": true,
             "hideEmpty": true,
             "hideZero": true,
-            "max": true,
+            "max": false,
             "min": false,
             "show": true,
             "total": false,
@@ -938,6 +1172,14 @@
               "metric": "success",
               "refId": "J",
               "step": 20
+            },
+            {
+              "expr": "buffer_pixels_count{op=\"cheese\"}",
+              "intervalFactor": 2,
+              "legendFormat": "buffer",
+              "metric": "buffer_pixels_count",
+              "refId": "K",
+              "step": 20
             }
           ],
           "thresholds": [],
@@ -950,6 +1192,7 @@
             "sort": 0,
             "value_type": "cumulative"
           },
+          "transparent": true,
           "type": "graph",
           "xaxis": {
             "mode": "time",
@@ -982,6 +1225,354 @@
       "repeatRowId": null,
       "showTitle": false,
       "title": "New row",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": false,
+      "height": 250,
+      "panels": [
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "fill": 1,
+          "id": 10,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": false,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "process_resident_memory_bytes{op=\"cheese\"}",
+              "intervalFactor": 2,
+              "legendFormat": "{{name}}",
+              "metric": "",
+              "refId": "A",
+              "step": 30
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Memory Bytes",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "transparent": true,
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "bytes",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {
+            "404": "#E24D42",
+            "404 inmemory": "#E24D42",
+            "error": "#E24D42"
+          },
+          "bars": false,
+          "datasource": null,
+          "fill": 1,
+          "id": 9,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "hideEmpty": true,
+            "hideZero": true,
+            "max": false,
+            "min": false,
+            "show": false,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "mid_404{op=\"cheese\"}",
+              "intervalFactor": 2,
+              "legendFormat": "404 {{name}}",
+              "metric": "mid_404",
+              "refId": "A",
+              "step": 30
+            },
+            {
+              "expr": "rpc_mid_errors{op=\"cheese\"}",
+              "intervalFactor": 2,
+              "legendFormat": "error",
+              "metric": "rpc_mid_errors",
+              "refId": "B",
+              "step": 30
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "InMemory",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "transparent": true,
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Dashboard Row",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": false,
+      "height": 250,
+      "panels": [
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "fill": 1,
+          "id": 14,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "hideEmpty": true,
+            "hideZero": true,
+            "max": false,
+            "min": false,
+            "show": false,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "qlistener_insert_db_duration_seconds{op=\"cheese\"}",
+              "intervalFactor": 2,
+              "legendFormat": "insert",
+              "refId": "A",
+              "step": 30
+            },
+            {
+              "expr": "qlistener_update_db_duration_seconds{op=\"cheese\"}",
+              "intervalFactor": 2,
+              "legendFormat": "update",
+              "refId": "B",
+              "step": 30
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Insert/Update Duration",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "transparent": true,
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {
+            "cheese": "#890F02",
+            "dispatcherd": "#890F02",
+            "inmemory": "#890F02",
+            "jobs": "#890F02",
+            "mid": "#890F02",
+            "pixels": "#890F02",
+            "qlistener": "#890F02"
+          },
+          "bars": false,
+          "datasource": null,
+          "fill": 1,
+          "id": 15,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "hideEmpty": true,
+            "hideZero": true,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "errors{op=\"cheese\"}",
+              "intervalFactor": 2,
+              "legendFormat": "{{name}}",
+              "metric": "errors",
+              "refId": "A",
+              "step": 30
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Errors",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "transparent": true,
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Dashboard Row",
       "titleSize": "h6"
     }
   ],
@@ -1022,5 +1613,5 @@
   },
   "timezone": "browser",
   "title": "Cheese",
-  "version": 51
+  "version": 76
 }

@@ -47,7 +47,7 @@
           "points": false,
           "renderer": "flot",
           "seriesOverrides": [],
-          "span": 10,
+          "span": 12,
           "stack": false,
           "steppedLine": false,
           "targets": [
@@ -185,134 +185,6 @@
           ]
         },
         {
-          "columns": [
-            {
-              "text": "Current",
-              "value": "current"
-            }
-          ],
-          "editable": true,
-          "error": false,
-          "fontSize": "100%",
-          "height": "470px",
-          "id": 35,
-          "links": [],
-          "pageSize": null,
-          "scroll": true,
-          "showHeader": true,
-          "sort": {
-            "col": 0,
-            "desc": true
-          },
-          "span": 2,
-          "styles": [
-            {
-              "dateFormat": "YYYY-MM-DD HH:mm:ss",
-              "pattern": "Time",
-              "type": "date"
-            },
-            {
-              "colorMode": "value",
-              "colors": [
-                "rgba(50, 172, 45, 0.97)",
-                "rgba(237, 129, 40, 0.89)",
-                "rgba(245, 54, 54, 0.9)"
-              ],
-              "decimals": 3,
-              "pattern": "/.*/",
-              "thresholds": [
-                "5"
-              ],
-              "type": "number",
-              "unit": "short"
-            }
-          ],
-          "targets": [
-            {
-              "expr": "qlistener_mt_manager_db_add_to_db_duration_seconds{quantile=\"0.99\", op=\"mobilink\"}",
-              "intervalFactor": 2,
-              "legendFormat": "mt manager",
-              "metric": "qlistener_mt_manager_db_add_to_db_duration_seconds",
-              "refId": "D",
-              "step": 120
-            },
-            {
-              "expr": "qlistener_access_campaign_add_to_db_duration_seconds{quantile=\"0.99\", op=\"mobilink\"}",
-              "intervalFactor": 2,
-              "legendFormat": "access campaign",
-              "metric": "qlistener_access_campaign_add_to_db_duration_seconds",
-              "refId": "A",
-              "step": 120
-            },
-            {
-              "expr": "qlistener_user_actions_add_to_db_duration_seconds{quantile=\"0.99\",  op=\"mobilink\"}",
-              "intervalFactor": 2,
-              "legendFormat": "user actions",
-              "metric": "qlistener_user_actions_add_to_db_duration_seconds",
-              "refId": "C",
-              "step": 120
-            },
-            {
-              "expr": "qlistener_operator_transactions_add_to_db_duration_seconds{quantile=\"0.99\", op=\"mobilink\"}",
-              "intervalFactor": 2,
-              "legendFormat": "operator transactions",
-              "metric": "qlistener_operator_transactions_add_to_db_duration_seconds",
-              "refId": "B",
-              "step": 120
-            },
-            {
-              "expr": "qlistener_add_postpaid_db_duration_seconds{quantile=\"0.99\",  op=\"mobilink\"}",
-              "intervalFactor": 2,
-              "legendFormat": "add postpaid",
-              "metric": "qlistener_add_postpaid_db_duration_seconds",
-              "refId": "E",
-              "step": 120
-            },
-            {
-              "expr": "qlistener_content_sent_add_to_db_duration_seconds{quantile=\"0.99\",  op=\"mobilink\"}",
-              "intervalFactor": 2,
-              "legendFormat": "content sent",
-              "metric": "qlistener_content_sent_add_to_db_duration_seconds",
-              "refId": "F",
-              "step": 120
-            },
-            {
-              "expr": "qlistener_pixel_transactions_add_to_db_duration_seconds{quantile=\"0.99\",  op=\"mobilink\"}",
-              "intervalFactor": 2,
-              "legendFormat": "pixel transaction add",
-              "metric": "qlistener_pixel_transactions_add_to_db_duration_seconds",
-              "refId": "H",
-              "step": 120
-            },
-            {
-              "expr": "qlistener_write_transaction_db_duration_seconds{quantile=\"0.99\",  op=\"mobilink\"}",
-              "intervalFactor": 2,
-              "legendFormat": "write transaction",
-              "metric": "qlistener_write_transaction_db_duration_seconds",
-              "refId": "I",
-              "step": 120
-            },
-            {
-              "expr": "qlistener_write_subscription_status_db_duration_seconds{quantile=\"0.99\",  op=\"mobilink\"}",
-              "intervalFactor": 2,
-              "legendFormat": "update subscriptions status",
-              "metric": "qlistener_write_subscription_status_db_duration_seconds",
-              "refId": "J",
-              "step": 120
-            },
-            {
-              "expr": "mt_set_retries_pending_status_db_duration_seconds{quantile=\"0.99\", op=\"mobilink\"}",
-              "intervalFactor": 2,
-              "refId": "G",
-              "step": 120
-            }
-          ],
-          "title": "DB Metrics Quantile 0.99",
-          "transform": "timeseries_aggregations",
-          "transparent": true,
-          "type": "table"
-        },
-        {
           "aliasColors": {},
           "bars": false,
           "datasource": null,
@@ -344,7 +216,7 @@
           "points": false,
           "renderer": "flot",
           "seriesOverrides": [],
-          "span": 10,
+          "span": 12,
           "stack": false,
           "steppedLine": false,
           "targets": [
@@ -473,128 +345,6 @@
               "show": true
             }
           ]
-        },
-        {
-          "columns": [
-            {
-              "text": "Current",
-              "value": "current"
-            }
-          ],
-          "editable": true,
-          "error": false,
-          "fontSize": "100%",
-          "height": "470px",
-          "id": 44,
-          "links": [],
-          "pageSize": null,
-          "scroll": true,
-          "showHeader": true,
-          "sort": {
-            "col": 0,
-            "desc": true
-          },
-          "span": 2,
-          "styles": [
-            {
-              "dateFormat": "YYYY-MM-DD HH:mm:ss",
-              "pattern": "Time",
-              "type": "date"
-            },
-            {
-              "colorMode": "value",
-              "colors": [
-                "rgba(50, 172, 45, 0.97)",
-                "rgba(237, 129, 40, 0.89)",
-                "rgba(245, 54, 54, 0.9)"
-              ],
-              "decimals": 3,
-              "pattern": "/.*/",
-              "thresholds": [
-                "5"
-              ],
-              "type": "number",
-              "unit": "short"
-            }
-          ],
-          "targets": [
-            {
-              "expr": "qlistener_mt_manager_db_add_to_db_duration_seconds{quantile=\"0.5\",  op=\"mobilink\"}",
-              "intervalFactor": 2,
-              "legendFormat": "mt manager",
-              "metric": "qlistener_mt_manager_db_add_to_db_duration_seconds",
-              "refId": "D",
-              "step": 120
-            },
-            {
-              "expr": "qlistener_access_campaign_add_to_db_duration_seconds{quantile=\"0.5\",  op=\"mobilink\"}",
-              "intervalFactor": 2,
-              "legendFormat": "access campaign",
-              "metric": "qlistener_access_campaign_add_to_db_duration_seconds",
-              "refId": "A",
-              "step": 120
-            },
-            {
-              "expr": "qlistener_user_actions_add_to_db_duration_seconds{quantile=\"0.5\",  op=\"mobilink\"}",
-              "intervalFactor": 2,
-              "legendFormat": "user actions",
-              "metric": "qlistener_user_actions_add_to_db_duration_seconds",
-              "refId": "C",
-              "step": 120
-            },
-            {
-              "expr": "qlistener_operator_transactions_add_to_db_duration_seconds{quantile=\"0.5\",  op=\"mobilink\"}",
-              "intervalFactor": 2,
-              "legendFormat": "operator transactions",
-              "metric": "qlistener_operator_transactions_add_to_db_duration_seconds",
-              "refId": "B",
-              "step": 120
-            },
-            {
-              "expr": "qlistener_add_postpaid_db_duration_seconds{quantile=\"0.5\",  op=\"mobilink\"}",
-              "intervalFactor": 2,
-              "legendFormat": "add postpaid",
-              "metric": "qlistener_add_postpaid_db_duration_seconds",
-              "refId": "E",
-              "step": 120
-            },
-            {
-              "expr": "qlistener_content_sent_add_to_db_duration_seconds{quantile=\"0.5\",  op=\"mobilink\"}",
-              "intervalFactor": 2,
-              "legendFormat": "content sent",
-              "metric": "qlistener_content_sent_add_to_db_duration_seconds",
-              "refId": "F",
-              "step": 120
-            },
-            {
-              "expr": "qlistener_pixel_transactions_add_to_db_duration_seconds{quantile=\"0.5\",  op=\"mobilink\"}",
-              "intervalFactor": 2,
-              "legendFormat": "pixel transaction add",
-              "metric": "qlistener_pixel_transactions_add_to_db_duration_seconds",
-              "refId": "H",
-              "step": 120
-            },
-            {
-              "expr": "qlistener_write_transaction_db_duration_seconds{quantile=\"0.5\",  op=\"mobilink\"}",
-              "intervalFactor": 2,
-              "legendFormat": "write transaction",
-              "metric": "qlistener_write_transaction_db_duration_seconds",
-              "refId": "I",
-              "step": 120
-            },
-            {
-              "expr": "qlistener_write_subscription_status_db_duration_seconds{quantile=\"0.5\",  op=\"mobilink\"}",
-              "intervalFactor": 2,
-              "legendFormat": "update subscriptions status",
-              "metric": "qlistener_write_subscription_status_db_duration_seconds",
-              "refId": "J",
-              "step": 120
-            }
-          ],
-          "title": "DB Metrics Quantile 0.5",
-          "transform": "timeseries_aggregations",
-          "transparent": true,
-          "type": "table"
         }
       ],
       "repeat": null,
@@ -935,254 +685,6 @@
           "type": "table"
         },
         {
-          "columns": [
-            {
-              "text": "Current",
-              "value": "current"
-            }
-          ],
-          "editable": true,
-          "error": false,
-          "fontSize": "100%",
-          "height": "",
-          "hideTimeOverride": true,
-          "id": 30,
-          "links": [],
-          "pageSize": null,
-          "scroll": true,
-          "showHeader": true,
-          "sort": {
-            "col": 0,
-            "desc": false
-          },
-          "span": 2,
-          "styles": [
-            {
-              "dateFormat": "YYYY-MM-DD HH:mm:ss",
-              "pattern": "Time",
-              "type": "date"
-            },
-            {
-              "colorMode": "value",
-              "colors": [
-                "rgba(50, 172, 45, 0.97)",
-                "rgba(237, 83, 40, 0.89)",
-                "rgba(245, 54, 54, 0.9)"
-              ],
-              "decimals": 3,
-              "pattern": "/.*/",
-              "thresholds": [
-                "6000"
-              ],
-              "type": "number",
-              "unit": "short"
-            }
-          ],
-          "targets": [
-            {
-              "expr": "pending_subscriptions_count{op=\"mobilink\"}",
-              "hide": false,
-              "intervalFactor": 2,
-              "legendFormat": "penging count",
-              "metric": "pending_subscriptions_count",
-              "refId": "B",
-              "step": 2
-            }
-          ],
-          "timeFrom": "1m",
-          "title": "Pending",
-          "transform": "timeseries_aggregations",
-          "transparent": true,
-          "type": "table"
-        },
-        {
-          "cacheTimeout": null,
-          "colorBackground": false,
-          "colorValue": false,
-          "colors": [
-            "rgba(50, 172, 45, 0.97)",
-            "rgba(218, 236, 5, 0.89)",
-            "rgba(245, 54, 54, 0.9)"
-          ],
-          "datasource": null,
-          "decimals": null,
-          "editable": true,
-          "error": false,
-          "format": "short",
-          "gauge": {
-            "maxValue": 1,
-            "minValue": 0,
-            "show": true,
-            "thresholdLabels": false,
-            "thresholdMarkers": true
-          },
-          "hideTimeOverride": true,
-          "id": 19,
-          "interval": null,
-          "links": [],
-          "mappingType": 1,
-          "mappingTypes": [
-            {
-              "name": "value to text",
-              "value": 1
-            },
-            {
-              "name": "range to text",
-              "value": 2
-            }
-          ],
-          "maxDataPoints": 100,
-          "minSpan": 1,
-          "nullPointMode": "connected",
-          "nullText": null,
-          "postfix": "",
-          "postfixFontSize": "50%",
-          "prefix": "",
-          "prefixFontSize": "50%",
-          "rangeMaps": [
-            {
-              "from": "null",
-              "text": "N/A",
-              "to": "null"
-            }
-          ],
-          "span": 2,
-          "sparkline": {
-            "fillColor": "rgba(31, 118, 189, 0.18)",
-            "full": false,
-            "lineColor": "rgb(31, 120, 193)",
-            "show": false
-          },
-          "targets": [
-            {
-              "expr": "inmem_operator_load_headers_error{ op=\"mobilink\"}",
-              "intervalFactor": 2,
-              "legendFormat": "load operators headers",
-              "metric": "inmem_operator_load_headers_error",
-              "refId": "A",
-              "step": 2
-            }
-          ],
-          "thresholds": "0,0.99,1",
-          "timeFrom": "1m",
-          "timeShift": null,
-          "title": "Load Operators Headers",
-          "transparent": true,
-          "type": "singlestat",
-          "valueFontSize": "80%",
-          "valueMaps": [
-            {
-              "op": "=",
-              "text": "N/A",
-              "value": "null"
-            },
-            {
-              "op": "=",
-              "text": "ok",
-              "value": "0"
-            },
-            {
-              "op": "=",
-              "text": "ERR",
-              "value": "1"
-            }
-          ],
-          "valueName": "current"
-        },
-        {
-          "cacheTimeout": null,
-          "colorBackground": false,
-          "colorValue": false,
-          "colors": [
-            "rgba(50, 172, 45, 0.97)",
-            "rgba(218, 236, 5, 0.89)",
-            "rgba(245, 54, 54, 0.9)"
-          ],
-          "datasource": null,
-          "decimals": null,
-          "editable": true,
-          "error": false,
-          "format": "short",
-          "gauge": {
-            "maxValue": 1,
-            "minValue": 0,
-            "show": true,
-            "thresholdLabels": false,
-            "thresholdMarkers": true
-          },
-          "hideTimeOverride": true,
-          "id": 15,
-          "interval": null,
-          "links": [],
-          "mappingType": 1,
-          "mappingTypes": [
-            {
-              "name": "value to text",
-              "value": 1
-            },
-            {
-              "name": "range to text",
-              "value": 2
-            }
-          ],
-          "maxDataPoints": 100,
-          "minSpan": 1,
-          "nullPointMode": "connected",
-          "nullText": null,
-          "postfix": "",
-          "postfixFontSize": "50%",
-          "prefix": "",
-          "prefixFontSize": "50%",
-          "rangeMaps": [
-            {
-              "from": "null",
-              "text": "N/A",
-              "to": "null"
-            }
-          ],
-          "span": 2,
-          "sparkline": {
-            "fillColor": "rgba(31, 118, 189, 0.18)",
-            "full": false,
-            "lineColor": "rgb(31, 120, 193)",
-            "show": false
-          },
-          "targets": [
-            {
-              "expr": "inmem_campaign_load_error{ op=\"mobilink\" }",
-              "intervalFactor": 2,
-              "metric": "inmem_campaign_load_error",
-              "refId": "A",
-              "step": 2
-            }
-          ],
-          "thresholds": "0,0.99,1",
-          "timeFrom": "1m",
-          "timeShift": null,
-          "title": "Campaign Load HTML",
-          "transparent": true,
-          "type": "singlestat",
-          "valueFontSize": "80%",
-          "valueMaps": [
-            {
-              "op": "=",
-              "text": "N/A",
-              "value": "null"
-            },
-            {
-              "op": "=",
-              "text": "ok",
-              "value": "0"
-            },
-            {
-              "op": "=",
-              "text": "ERR",
-              "value": "1"
-            }
-          ],
-          "valueName": "current"
-        },
-        {
           "cacheTimeout": null,
           "colorBackground": false,
           "colorValue": false,
@@ -1487,7 +989,7 @@
           "points": false,
           "renderer": "flot",
           "seriesOverrides": [],
-          "span": 5,
+          "span": 6,
           "stack": false,
           "steppedLine": false,
           "targets": [
@@ -1496,7 +998,7 @@
               "intervalFactor": 2,
               "metric": "rbmq_notifier_errors",
               "refId": "A",
-              "step": 40
+              "step": 30
             },
             {
               "expr": "rbmq_notifier_buffer_pending_gauge_size{op=\"mobilink\"}",
@@ -1504,21 +1006,21 @@
               "intervalFactor": 2,
               "metric": "rbmq_notifier_buffer_pending_gauge_size",
               "refId": "B",
-              "step": 40
+              "step": 30
             },
             {
               "expr": "rbmq_notifier_buffer_reading_gauge_size{op=\"mobilink\"}",
               "intervalFactor": 2,
               "metric": "rbmq_notifier_buffer_reading_gauge_size",
               "refId": "C",
-              "step": 40
+              "step": 30
             },
             {
               "expr": "rbmq_notifier_reconnects_count{op=\"mobilink\"}",
               "intervalFactor": 2,
               "metric": "rbmq_notifier_reconnects_count",
               "refId": "D",
-              "step": 40
+              "step": 30
             },
             {
               "expr": "notify_errors{op=\"mobilink\"}",
@@ -1526,7 +1028,7 @@
               "legendFormat": "{{job}} notify errors ",
               "metric": "notify_errors",
               "refId": "E",
-              "step": 40
+              "step": 30
             }
           ],
           "thresholds": [],
@@ -1727,6 +1229,7 @@
             "sort": 0,
             "value_type": "cumulative"
           },
+          "transparent": true,
           "type": "graph",
           "xaxis": {
             "mode": "time",
@@ -1737,6 +1240,87 @@
           "yaxes": [
             {
               "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {},
+          "height": "",
+          "id": 41,
+          "legend": {
+            "avg": false,
+            "current": true,
+            "hideEmpty": false,
+            "hideZero": false,
+            "max": false,
+            "min": false,
+            "rightSide": false,
+            "show": false,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 5,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "http_request_duration_microseconds{op=\"mobilink\"}",
+              "intervalFactor": 2,
+              "legendFormat": "{{name}} {{quantile}}",
+              "metric": "http_request_duration_microseconds",
+              "refId": "A",
+              "step": 40
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Services Response Time",
+          "tooltip": {
+            "msResolution": false,
+            "shared": true,
+            "sort": 0,
+            "value_type": "cumulative"
+          },
+          "transparent": true,
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "µs",
               "label": null,
               "logBase": 1,
               "max": null,
@@ -1821,6 +1405,7 @@
             "sort": 0,
             "value_type": "cumulative"
           },
+          "transparent": true,
           "type": "graph",
           "xaxis": {
             "mode": "time",
@@ -1848,23 +1433,68 @@
           ]
         },
         {
-          "aliasColors": {},
+          "aliasColors": {
+            "rpc_inmem_404_errors{country=\"pk\",instance=\"52.66.23.201:50302\",job=\"mobilink-contentd\",name=\"contentd\",op=\"mobilink\"}": "#BF1B00",
+            "rpc_inmem_404_errors{country=\"pk\",instance=\"52.66.23.201:50303\",job=\"mobilink-jobs\",name=\"jobs\",op=\"mobilink\"}": "#BF1B00",
+            "rpc_inmem_404_errors{country=\"pk\",instance=\"52.66.23.201:50304\",job=\"mobilink-qlistener\",name=\"qlistener\",op=\"mobilink\"}": "#BF1B00",
+            "rpc_inmem_404_errors{country=\"pk\",instance=\"52.66.23.201:50305\",job=\"mobilink-mt\",name=\"mt\",op=\"mobilink\"}": "#BF1B00",
+            "rpc_inmem_404_errors{country=\"pk\",instance=\"52.66.23.201:50309\",job=\"mobilink-pixels\",name=\"pixels\",op=\"mobilink\"}": "#BF1B00",
+            "rpc_inmem_404_errors{group=\"mumbai\",instance=\"52.66.23.201:50309\",job=\"pixels\"}": "#890F02",
+            "rpc_inmem_404_errors{group=\"pk\",instance=\"52.66.23.201:50302\",job=\"contentd\"}": "#E24D42",
+            "rpc_inmem_404_errors{group=\"pk\",instance=\"52.66.23.201:50309\",job=\"pixels\"}": "#890F02",
+            "rpc_inmem_errors{country=\"pk\",instance=\"52.66.23.201:50300\",job=\"mobilink-dispatcherd\",name=\"dispatcherd\",op=\"mobilink\"}": "#BF1B00",
+            "rpc_inmem_errors{country=\"pk\",instance=\"52.66.23.201:50302\",job=\"mobilink-contentd\",name=\"contentd\",op=\"mobilink\"}": "#BF1B00",
+            "rpc_inmem_errors{country=\"pk\",instance=\"52.66.23.201:50303\",job=\"mobilink-jobs\",name=\"jobs\",op=\"mobilink\"}": "#BF1B00",
+            "rpc_inmem_errors{country=\"pk\",instance=\"52.66.23.201:50304\",job=\"mobilink-qlistener\",name=\"qlistener\",op=\"mobilink\"}": "#BF1B00",
+            "rpc_inmem_errors{country=\"pk\",instance=\"52.66.23.201:50305\",job=\"mobilink-mt\",name=\"mt\",op=\"mobilink\"}": "#BF1B00",
+            "rpc_inmem_errors{country=\"pk\",instance=\"52.66.23.201:50309\",job=\"mobilink-pixels\",name=\"pixels\",op=\"mobilink\"}": "#BF1B00",
+            "rpc_inmem_errors{group=\"mumbai\",instance=\"52.66.23.201:50300\",job=\"dispatcherd\"}": "#E24D42",
+            "rpc_inmem_errors{group=\"mumbai\",instance=\"52.66.23.201:50302\",job=\"contentd\"}": "#890F02",
+            "rpc_inmem_errors{group=\"mumbai\",instance=\"52.66.23.201:50303\",job=\"mo\"}": "#BF1B00",
+            "rpc_inmem_errors{group=\"mumbai\",instance=\"52.66.23.201:50304\",job=\"qlistener\"}": "#890F02",
+            "rpc_inmem_errors{group=\"mumbai\",instance=\"52.66.23.201:50305\",job=\"mt_manager\"}": "#BF1B00",
+            "rpc_inmem_errors{group=\"mumbai\",instance=\"52.66.23.201:50309\",job=\"pixels\"}": "#58140C",
+            "rpc_inmem_success{country=\"pk\",instance=\"52.66.23.201:50302\",job=\"mobilink-contentd\",name=\"contentd\",op=\"mobilink\"}": "#7EB26D",
+            "rpc_inmem_success{country=\"pk\",instance=\"52.66.23.201:50303\",job=\"mobilink-jobs\",name=\"jobs\",op=\"mobilink\"}": "#7EB26D",
+            "rpc_inmem_success{country=\"pk\",instance=\"52.66.23.201:50304\",job=\"mobilink-qlistener\",name=\"qlistener\",op=\"mobilink\"}": "#7EB26D",
+            "rpc_inmem_success{country=\"pk\",instance=\"52.66.23.201:50305\",job=\"mobilink-mt\",name=\"mt\",op=\"mobilink\"}": "#7EB26D",
+            "rpc_inmem_success{country=\"pk\",instance=\"52.66.23.201:50309\",job=\"mobilink-pixels\",name=\"pixels\",op=\"mobilink\"}": "#7EB26D",
+            "rpc_inmem_success{group=\"mumbai\",instance=\"52.66.23.201:50300\",job=\"dispatcherd\"}": "#7EB26D",
+            "rpc_inmem_success{group=\"mumbai\",instance=\"52.66.23.201:50302\",job=\"contentd\"}": "#9AC48A",
+            "rpc_inmem_success{group=\"mumbai\",instance=\"52.66.23.201:50303\",job=\"mo\"}": "#7EB26D",
+            "rpc_inmem_success{group=\"mumbai\",instance=\"52.66.23.201:50304\",job=\"qlistener\"}": "#629E51",
+            "rpc_inmem_success{group=\"mumbai\",instance=\"52.66.23.201:50305\",job=\"mt_manager\"}": "#7EB26D",
+            "rpc_inmem_success{group=\"mumbai\",instance=\"52.66.23.201:50309\",job=\"pixels\"}": "#3F6833",
+            "rpc_inmem_success{group=\"pk\",instance=\"52.66.23.201:50300\",job=\"dispatcherd\",name=\"dispatcherd\"}": "#629E51",
+            "rpc_inmem_success{group=\"pk\",instance=\"52.66.23.201:50302\",job=\"contentd\",name=\"contentd\"}": "#629E51",
+            "rpc_inmem_success{group=\"pk\",instance=\"52.66.23.201:50302\",job=\"contentd\"}": "#7EB26D",
+            "rpc_inmem_success{group=\"pk\",instance=\"52.66.23.201:50305\",job=\"mt_manager\",name=\"mt\"}": "#629E51",
+            "rpc_inmem_success{group=\"pk\",instance=\"52.66.23.201:50305\",job=\"mt_manager\"}": "#7EB26D",
+            "rpc_inmem_success{group=\"pk\",instance=\"52.66.23.201:50309\",job=\"pixels\"}": "#508642",
+            "rpc_mid_404_errors{country=\"pk\",instance=\"52.66.23.201:50303\",job=\"mobilink-jobs\",name=\"jobs\",op=\"mobilink\"}": "#890F02",
+            "rpc_mid_errors{country=\"pk\",instance=\"52.66.23.201:50302\",job=\"mobilink-contentd\",name=\"contentd\",op=\"mobilink\"}": "#890F02",
+            "rpc_mid_errors{country=\"pk\",instance=\"52.66.23.201:50303\",job=\"mobilink-jobs\",name=\"jobs\",op=\"mobilink\"}": "#890F02",
+            "rpc_mid_errors{country=\"pk\",instance=\"52.66.23.201:50305\",job=\"mobilink-mt\",name=\"mt\",op=\"mobilink\"}": "#890F02",
+            "rpc_mid_errors{country=\"pk\",instance=\"52.66.23.201:50309\",job=\"mobilink-pixels\",name=\"pixels\",op=\"mobilink\"}": "#890F02",
+            "rpc_mid_success{country=\"pk\",instance=\"52.66.23.201:50302\",job=\"mobilink-contentd\",name=\"contentd\",op=\"mobilink\"}": "#7EB26D",
+            "rpc_mid_success{country=\"pk\",instance=\"52.66.23.201:50303\",job=\"mobilink-jobs\",name=\"jobs\",op=\"mobilink\"}": "#7EB26D",
+            "rpc_mid_success{country=\"pk\",instance=\"52.66.23.201:50305\",job=\"mobilink-mt\",name=\"mt\",op=\"mobilink\"}": "#7EB26D",
+            "rpc_mid_success{country=\"pk\",instance=\"52.66.23.201:50309\",job=\"mobilink-pixels\",name=\"pixels\",op=\"mobilink\"}": "#7EB26D"
+          },
           "bars": false,
           "datasource": null,
           "editable": true,
           "error": false,
           "fill": 1,
           "grid": {},
-          "height": "",
-          "id": 41,
+          "id": 24,
           "legend": {
             "avg": false,
             "current": true,
-            "hideEmpty": false,
-            "hideZero": false,
-            "max": false,
+            "hideEmpty": true,
+            "hideZero": true,
+            "max": true,
             "min": false,
-            "rightSide": false,
             "show": false,
             "total": false,
             "values": true
@@ -1883,24 +1513,38 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "http_request_duration_microseconds{op=\"mobilink\"}",
+              "expr": "rpc_mid_success{op=\"mobilink\"}",
               "intervalFactor": 2,
-              "legendFormat": "{{name}} {{quantile}}",
-              "metric": "http_request_duration_microseconds",
+              "metric": "",
               "refId": "A",
+              "step": 30
+            },
+            {
+              "expr": "rpc_mid_errors{op=\"mobilink\"}",
+              "intervalFactor": 2,
+              "metric": "",
+              "refId": "B",
+              "step": 30
+            },
+            {
+              "expr": "rpc_mid_404_errors{op=\"mobilink\"}",
+              "intervalFactor": 2,
+              "metric": "",
+              "refId": "C",
               "step": 30
             }
           ],
           "thresholds": [],
           "timeFrom": null,
           "timeShift": null,
-          "title": "Services Response Time",
+          "title": "Mid Requests Per Minute",
           "tooltip": {
             "msResolution": false,
             "shared": true,
             "sort": 0,
             "value_type": "cumulative"
           },
+          "transparent": true,
           "type": "graph",
           "xaxis": {
             "mode": "time",
@@ -1910,7 +1554,7 @@
           },
           "yaxes": [
             {
-              "format": "µs",
+              "format": "short",
               "label": null,
               "logBase": 1,
               "max": null,
@@ -2116,6 +1760,7 @@
             "sort": 0,
             "value_type": "cumulative"
           },
+          "transparent": true,
           "type": "graph",
           "xaxis": {
             "mode": "time",
@@ -2142,6 +1787,148 @@
             }
           ]
         },
+        {
+          "aliasColors": {
+            "mt manager db errors": "#890F02",
+            "mt manager db success": "#7EB26D"
+          },
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {},
+          "id": 49,
+          "legend": {
+            "avg": false,
+            "current": true,
+            "hideEmpty": true,
+            "hideZero": true,
+            "max": true,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "qlistener_mt_manager_add_to_db_errors{op=\"mobilink\"}",
+              "intervalFactor": 2,
+              "legendFormat": "mt manager db errors",
+              "metric": "qlistener_mt_manager_add_to_db_errors",
+              "refId": "A",
+              "step": 30
+            },
+            {
+              "expr": "qlistener_mt_manager_add_to_db_success{op=\"mobilink\"}",
+              "intervalFactor": 2,
+              "legendFormat": "mt manager db success",
+              "metric": "qlistener_mt_manager_add_to_db_success",
+              "refId": "B",
+              "step": 30
+            },
+            {
+              "expr": "qlistener_mt_manager_dropped{op=\"mobilink\"}",
+              "intervalFactor": 2,
+              "legendFormat": "dropped",
+              "metric": "qlistener_mt_manager_dropped",
+              "refId": "C",
+              "step": 30
+            },
+            {
+              "expr": "qlistener_mt_manager_empty{op=\"mobilink\"}",
+              "intervalFactor": 2,
+              "legendFormat": "empty",
+              "metric": "qlistener_mt_manager_empty",
+              "refId": "D",
+              "step": 30
+            },
+            {
+              "expr": "mt_not_paid_status_mt_blacklisted{op=\"mobilink\"}",
+              "intervalFactor": 2,
+              "legendFormat": "blacklisted",
+              "metric": "mt_not_paid_status_mt_blacklisted",
+              "refId": "E",
+              "step": 30
+            },
+            {
+              "expr": "mt_not_paid_status_mt_postpaid{op=\"mobilink\"}",
+              "intervalFactor": 2,
+              "legendFormat": "postpaid",
+              "metric": "mt_not_paid_status_mt_postpaid",
+              "refId": "F",
+              "step": 30
+            },
+            {
+              "expr": "mt_not_paid_status_mt_rejected{op=\"mobilink\"}",
+              "intervalFactor": 2,
+              "legendFormat": "rejected",
+              "metric": "mt_not_paid_status_mt_rejected",
+              "refId": "G",
+              "step": 30
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "MT Manager",
+          "tooltip": {
+            "msResolution": false,
+            "shared": true,
+            "sort": 0,
+            "value_type": "cumulative"
+          },
+          "transparent": true,
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "New row",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": false,
+      "height": "250px",
+      "panels": [
         {
           "aliasColors": {
             "add_to_db_success": "#7EB26D"
@@ -2227,123 +2014,7 @@
             "sort": 0,
             "value_type": "cumulative"
           },
-          "type": "graph",
-          "xaxis": {
-            "mode": "time",
-            "name": null,
-            "show": true,
-            "values": []
-          },
-          "yaxes": [
-            {
-              "format": "short",
-              "label": null,
-              "logBase": 1,
-              "max": null,
-              "min": null,
-              "show": true
-            },
-            {
-              "format": "short",
-              "label": null,
-              "logBase": 1,
-              "max": null,
-              "min": null,
-              "show": true
-            }
-          ]
-        }
-      ],
-      "repeat": null,
-      "repeatIteration": null,
-      "repeatRowId": null,
-      "showTitle": false,
-      "title": "New row",
-      "titleSize": "h6"
-    },
-    {
-      "collapse": false,
-      "height": "250px",
-      "panels": [
-        {
-          "aliasColors": {
-            "mt manager db errors": "#890F02",
-            "mt manager db success": "#7EB26D"
-          },
-          "bars": false,
-          "datasource": null,
-          "editable": true,
-          "error": false,
-          "fill": 1,
-          "grid": {},
-          "id": 49,
-          "legend": {
-            "avg": false,
-            "current": true,
-            "hideEmpty": true,
-            "hideZero": true,
-            "max": true,
-            "min": false,
-            "show": true,
-            "total": false,
-            "values": true
-          },
-          "lines": true,
-          "linewidth": 2,
-          "links": [],
-          "nullPointMode": "connected",
-          "percentage": false,
-          "pointradius": 5,
-          "points": false,
-          "renderer": "flot",
-          "seriesOverrides": [],
-          "span": 6,
-          "stack": false,
-          "steppedLine": false,
-          "targets": [
-            {
-              "expr": "qlistener_mt_manager_add_to_db_errors{op=\"mobilink\"}",
-              "intervalFactor": 2,
-              "legendFormat": "mt manager db errors",
-              "metric": "qlistener_mt_manager_add_to_db_errors",
-              "refId": "A",
-              "step": 30
-            },
-            {
-              "expr": "qlistener_mt_manager_add_to_db_success{op=\"mobilink\"}",
-              "intervalFactor": 2,
-              "legendFormat": "mt manager db success",
-              "metric": "qlistener_mt_manager_add_to_db_success",
-              "refId": "B",
-              "step": 30
-            },
-            {
-              "expr": "qlistener_mt_manager_dropped{op=\"mobilink\"}",
-              "intervalFactor": 2,
-              "legendFormat": "dropped",
-              "metric": "qlistener_mt_manager_dropped",
-              "refId": "C",
-              "step": 30
-            },
-            {
-              "expr": "qlistener_mt_manager_empty{op=\"mobilink\"}",
-              "intervalFactor": 2,
-              "legendFormat": "empty",
-              "metric": "qlistener_mt_manager_empty",
-              "refId": "D",
-              "step": 30
-            }
-          ],
-          "thresholds": [],
-          "timeFrom": null,
-          "timeShift": null,
-          "title": "MT Manager",
-          "tooltip": {
-            "msResolution": false,
-            "shared": true,
-            "sort": 0,
-            "value_type": "cumulative"
-          },
+          "transparent": true,
           "type": "graph",
           "xaxis": {
             "mode": "time",
@@ -2398,7 +2069,7 @@
             "current": true,
             "hideEmpty": true,
             "hideZero": true,
-            "max": false,
+            "max": true,
             "min": false,
             "show": true,
             "total": false,
@@ -2493,6 +2164,7 @@
             "sort": 0,
             "value_type": "cumulative"
           },
+          "transparent": true,
           "type": "graph",
           "xaxis": {
             "mode": "time",
@@ -2603,6 +2275,7 @@
             "sort": 0,
             "value_type": "cumulative"
           },
+          "transparent": true,
           "type": "graph",
           "xaxis": {
             "mode": "time",
@@ -2700,6 +2373,7 @@
             "sort": 0,
             "value_type": "cumulative"
           },
+          "transparent": true,
           "type": "graph",
           "xaxis": {
             "mode": "time",
@@ -2749,7 +2423,7 @@
             "current": true,
             "hideEmpty": true,
             "hideZero": true,
-            "max": false,
+            "max": true,
             "min": false,
             "rightSide": false,
             "show": true,
@@ -2840,136 +2514,6 @@
           "tooltip": {
             "msResolution": false,
             "shared": false,
-            "sort": 0,
-            "value_type": "cumulative"
-          },
-          "transparent": true,
-          "type": "graph",
-          "xaxis": {
-            "mode": "time",
-            "name": null,
-            "show": true,
-            "values": []
-          },
-          "yaxes": [
-            {
-              "format": "short",
-              "label": null,
-              "logBase": 1,
-              "max": null,
-              "min": null,
-              "show": true
-            },
-            {
-              "format": "short",
-              "label": null,
-              "logBase": 1,
-              "max": null,
-              "min": null,
-              "show": true
-            }
-          ]
-        },
-        {
-          "aliasColors": {
-            "rpc_inmem_404_errors{country=\"pk\",instance=\"52.66.23.201:50302\",job=\"mobilink-contentd\",name=\"contentd\",op=\"mobilink\"}": "#BF1B00",
-            "rpc_inmem_404_errors{country=\"pk\",instance=\"52.66.23.201:50303\",job=\"mobilink-jobs\",name=\"jobs\",op=\"mobilink\"}": "#BF1B00",
-            "rpc_inmem_404_errors{country=\"pk\",instance=\"52.66.23.201:50304\",job=\"mobilink-qlistener\",name=\"qlistener\",op=\"mobilink\"}": "#BF1B00",
-            "rpc_inmem_404_errors{country=\"pk\",instance=\"52.66.23.201:50305\",job=\"mobilink-mt\",name=\"mt\",op=\"mobilink\"}": "#BF1B00",
-            "rpc_inmem_404_errors{country=\"pk\",instance=\"52.66.23.201:50309\",job=\"mobilink-pixels\",name=\"pixels\",op=\"mobilink\"}": "#BF1B00",
-            "rpc_inmem_404_errors{group=\"mumbai\",instance=\"52.66.23.201:50309\",job=\"pixels\"}": "#890F02",
-            "rpc_inmem_404_errors{group=\"pk\",instance=\"52.66.23.201:50302\",job=\"contentd\"}": "#E24D42",
-            "rpc_inmem_404_errors{group=\"pk\",instance=\"52.66.23.201:50309\",job=\"pixels\"}": "#890F02",
-            "rpc_inmem_errors{country=\"pk\",instance=\"52.66.23.201:50300\",job=\"mobilink-dispatcherd\",name=\"dispatcherd\",op=\"mobilink\"}": "#BF1B00",
-            "rpc_inmem_errors{country=\"pk\",instance=\"52.66.23.201:50302\",job=\"mobilink-contentd\",name=\"contentd\",op=\"mobilink\"}": "#BF1B00",
-            "rpc_inmem_errors{country=\"pk\",instance=\"52.66.23.201:50303\",job=\"mobilink-jobs\",name=\"jobs\",op=\"mobilink\"}": "#BF1B00",
-            "rpc_inmem_errors{country=\"pk\",instance=\"52.66.23.201:50304\",job=\"mobilink-qlistener\",name=\"qlistener\",op=\"mobilink\"}": "#BF1B00",
-            "rpc_inmem_errors{country=\"pk\",instance=\"52.66.23.201:50305\",job=\"mobilink-mt\",name=\"mt\",op=\"mobilink\"}": "#BF1B00",
-            "rpc_inmem_errors{country=\"pk\",instance=\"52.66.23.201:50309\",job=\"mobilink-pixels\",name=\"pixels\",op=\"mobilink\"}": "#BF1B00",
-            "rpc_inmem_errors{group=\"mumbai\",instance=\"52.66.23.201:50300\",job=\"dispatcherd\"}": "#E24D42",
-            "rpc_inmem_errors{group=\"mumbai\",instance=\"52.66.23.201:50302\",job=\"contentd\"}": "#890F02",
-            "rpc_inmem_errors{group=\"mumbai\",instance=\"52.66.23.201:50303\",job=\"mo\"}": "#BF1B00",
-            "rpc_inmem_errors{group=\"mumbai\",instance=\"52.66.23.201:50304\",job=\"qlistener\"}": "#890F02",
-            "rpc_inmem_errors{group=\"mumbai\",instance=\"52.66.23.201:50305\",job=\"mt_manager\"}": "#BF1B00",
-            "rpc_inmem_errors{group=\"mumbai\",instance=\"52.66.23.201:50309\",job=\"pixels\"}": "#58140C",
-            "rpc_inmem_success{country=\"pk\",instance=\"52.66.23.201:50302\",job=\"mobilink-contentd\",name=\"contentd\",op=\"mobilink\"}": "#7EB26D",
-            "rpc_inmem_success{country=\"pk\",instance=\"52.66.23.201:50303\",job=\"mobilink-jobs\",name=\"jobs\",op=\"mobilink\"}": "#7EB26D",
-            "rpc_inmem_success{country=\"pk\",instance=\"52.66.23.201:50304\",job=\"mobilink-qlistener\",name=\"qlistener\",op=\"mobilink\"}": "#7EB26D",
-            "rpc_inmem_success{country=\"pk\",instance=\"52.66.23.201:50305\",job=\"mobilink-mt\",name=\"mt\",op=\"mobilink\"}": "#7EB26D",
-            "rpc_inmem_success{country=\"pk\",instance=\"52.66.23.201:50309\",job=\"mobilink-pixels\",name=\"pixels\",op=\"mobilink\"}": "#7EB26D",
-            "rpc_inmem_success{group=\"mumbai\",instance=\"52.66.23.201:50300\",job=\"dispatcherd\"}": "#7EB26D",
-            "rpc_inmem_success{group=\"mumbai\",instance=\"52.66.23.201:50302\",job=\"contentd\"}": "#9AC48A",
-            "rpc_inmem_success{group=\"mumbai\",instance=\"52.66.23.201:50303\",job=\"mo\"}": "#7EB26D",
-            "rpc_inmem_success{group=\"mumbai\",instance=\"52.66.23.201:50304\",job=\"qlistener\"}": "#629E51",
-            "rpc_inmem_success{group=\"mumbai\",instance=\"52.66.23.201:50305\",job=\"mt_manager\"}": "#7EB26D",
-            "rpc_inmem_success{group=\"mumbai\",instance=\"52.66.23.201:50309\",job=\"pixels\"}": "#3F6833",
-            "rpc_inmem_success{group=\"pk\",instance=\"52.66.23.201:50300\",job=\"dispatcherd\",name=\"dispatcherd\"}": "#629E51",
-            "rpc_inmem_success{group=\"pk\",instance=\"52.66.23.201:50302\",job=\"contentd\",name=\"contentd\"}": "#629E51",
-            "rpc_inmem_success{group=\"pk\",instance=\"52.66.23.201:50302\",job=\"contentd\"}": "#7EB26D",
-            "rpc_inmem_success{group=\"pk\",instance=\"52.66.23.201:50305\",job=\"mt_manager\",name=\"mt\"}": "#629E51",
-            "rpc_inmem_success{group=\"pk\",instance=\"52.66.23.201:50305\",job=\"mt_manager\"}": "#7EB26D",
-            "rpc_inmem_success{group=\"pk\",instance=\"52.66.23.201:50309\",job=\"pixels\"}": "#508642"
-          },
-          "bars": false,
-          "datasource": null,
-          "editable": true,
-          "error": false,
-          "fill": 1,
-          "grid": {},
-          "id": 24,
-          "legend": {
-            "avg": false,
-            "current": true,
-            "hideEmpty": true,
-            "hideZero": true,
-            "max": true,
-            "min": false,
-            "show": false,
-            "total": false,
-            "values": true
-          },
-          "lines": true,
-          "linewidth": 2,
-          "links": [],
-          "nullPointMode": "connected",
-          "percentage": false,
-          "pointradius": 5,
-          "points": false,
-          "renderer": "flot",
-          "seriesOverrides": [],
-          "span": 6,
-          "stack": false,
-          "steppedLine": false,
-          "targets": [
-            {
-              "expr": "rpc_inmem_success{op=\"mobilink\"}",
-              "intervalFactor": 2,
-              "metric": "rpc_inmem_success",
-              "refId": "A",
-              "step": 30
-            },
-            {
-              "expr": "rpc_inmem_errors{op=\"mobilink\"}",
-              "intervalFactor": 2,
-              "metric": "rpc_inmem_errors",
-              "refId": "B",
-              "step": 30
-            },
-            {
-              "expr": "rpc_inmem_404_errors{op=\"mobilink\"}",
-              "intervalFactor": 2,
-              "metric": "rpc_inmem_404_errors",
-              "refId": "C",
-              "step": 30
-            }
-          ],
-          "thresholds": [],
-          "timeFrom": null,
-          "timeShift": null,
-          "title": "InMemory Requests Per Minute",
-          "tooltip": {
-            "msResolution": false,
-            "shared": true,
             "sort": 0,
             "value_type": "cumulative"
           },
@@ -3112,6 +2656,7 @@
             "sort": 0,
             "value_type": "cumulative"
           },
+          "transparent": true,
           "type": "graph",
           "xaxis": {
             "mode": "time",
@@ -3219,6 +2764,7 @@
             "sort": 0,
             "value_type": "cumulative"
           },
+          "transparent": true,
           "type": "graph",
           "xaxis": {
             "mode": "time",
@@ -3348,6 +2894,7 @@
             "sort": 0,
             "value_type": "cumulative"
           },
+          "transparent": true,
           "type": "graph",
           "xaxis": {
             "mode": "time",
@@ -3441,6 +2988,7 @@
             "sort": 0,
             "value_type": "cumulative"
           },
+          "transparent": true,
           "type": "graph",
           "xaxis": {
             "mode": "time",
@@ -3635,6 +3183,7 @@
             "sort": 0,
             "value_type": "cumulative"
           },
+          "transparent": true,
           "type": "graph",
           "xaxis": {
             "mode": "time",
@@ -3729,6 +3278,7 @@
             "sort": 0,
             "value_type": "individual"
           },
+          "transparent": true,
           "type": "graph",
           "xaxis": {
             "mode": "time",
@@ -3825,6 +3375,7 @@
             "sort": 0,
             "value_type": "cumulative"
           },
+          "transparent": true,
           "type": "graph",
           "xaxis": {
             "mode": "time",
@@ -3880,6 +3431,8 @@
           "legend": {
             "avg": false,
             "current": true,
+            "hideEmpty": true,
+            "hideZero": true,
             "max": false,
             "min": false,
             "show": true,
@@ -3925,6 +3478,7 @@
             "sort": 0,
             "value_type": "cumulative"
           },
+          "transparent": true,
           "type": "graph",
           "xaxis": {
             "mode": "time",
@@ -4005,6 +3559,7 @@
             "sort": 0,
             "value_type": "cumulative"
           },
+          "transparent": true,
           "type": "graph",
           "xaxis": {
             "mode": "time",
@@ -4077,5 +3632,5 @@
   },
   "timezone": "utc",
   "title": "Mobilink",
-  "version": 110
+  "version": 127
 }

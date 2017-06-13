@@ -2,12 +2,14 @@
   "annotations": {
     "list": []
   },
+  "description": "Mid Reporter",
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
   "hideControls": false,
   "id": 20,
   "links": [],
+  "refresh": "1m",
   "rows": [
     {
       "collapse": false,
@@ -44,10 +46,10 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "reporter_send_duration_seconds",
+              "expr": "mid_send_duration_seconds",
               "intervalFactor": 2,
               "legendFormat": "send {{op}} {{quantile}}",
-              "metric": "reporter_send_duration_seconds",
+              "metric": "mid_send_duration_seconds",
               "refId": "A",
               "step": 30
             }
@@ -55,12 +57,13 @@
           "thresholds": [],
           "timeFrom": null,
           "timeShift": null,
-          "title": "Send to Acceptor",
+          "title": "Send to Acceptor Duration (sec)",
           "tooltip": {
             "shared": true,
             "sort": 0,
             "value_type": "individual"
           },
+          "transparent": true,
           "type": "graph",
           "xaxis": {
             "mode": "time",
@@ -130,10 +133,10 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "reporter_breathe_duration_seconds ",
+              "expr": "mid_breathe_duration_seconds ",
               "intervalFactor": 2,
               "legendFormat": "breathe {{op}}",
-              "metric": "reporter_breathe_duration_seconds",
+              "metric": "mid_breathe_duration_seconds",
               "refId": "A",
               "step": 30
             }
@@ -141,12 +144,13 @@
           "thresholds": [],
           "timeFrom": null,
           "timeShift": null,
-          "title": "Breathe",
+          "title": "Breathe Duration (sec)",
           "tooltip": {
             "shared": true,
             "sort": 0,
             "value_type": "individual"
           },
+          "transparent": true,
           "type": "graph",
           "xaxis": {
             "mode": "time",
@@ -186,33 +190,19 @@
       "height": 250,
       "panels": [
         {
-          "aliasColors": {
-            "errors inmem": "#E24D42",
-            "success beeline-reporter": "#7EB26D",
-            "success cheese-inmem": "#7EB26D",
-            "success cheese-reporter": "#7EB26D",
-            "success inmem": "#7EB26D",
-            "success mobilink-reporter": "#7EB26D",
-            "success qrtech-inmem": "#7EB26D",
-            "success qrtech-reporter": "#7EB26D",
-            "success yondu-inmem": "#7EB26D",
-            "success yondu-reporter": "#7EB26D"
-          },
+          "aliasColors": {},
           "bars": false,
           "datasource": null,
           "fill": 1,
-          "id": 3,
+          "id": 5,
           "legend": {
             "avg": false,
-            "current": true,
-            "hideEmpty": true,
-            "hideZero": true,
+            "current": false,
             "max": false,
             "min": false,
-            "rightSide": true,
             "show": false,
             "total": false,
-            "values": true
+            "values": false
           },
           "lines": true,
           "linewidth": 1,
@@ -228,39 +218,24 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "rpc_acceptor_success",
+              "expr": "mid_aggregatae_sum",
               "intervalFactor": 2,
-              "legendFormat": "success {{job}}",
-              "metric": "rpc_acceptor_success",
+              "legendFormat": "{{op}}",
+              "metric": "mid_aggregatae_sum",
               "refId": "A",
-              "step": 30
-            },
-            {
-              "expr": "rpc_acceptor_errors",
-              "intervalFactor": 2,
-              "legendFormat": "errors {{job}}",
-              "metric": "rpc_acceptor_errors",
-              "refId": "B",
-              "step": 30
-            },
-            {
-              "expr": "rpc_acceptor_404_errors",
-              "intervalFactor": 2,
-              "legendFormat": "404 {{job}}",
-              "metric": "rpc_acceptor_404_errors",
-              "refId": "C",
               "step": 30
             }
           ],
           "thresholds": [],
           "timeFrom": null,
           "timeShift": null,
-          "title": "Acceptor Calls",
+          "title": "Sum",
           "tooltip": {
             "shared": true,
             "sort": 0,
             "value_type": "individual"
           },
+          "transparent": true,
           "type": "graph",
           "xaxis": {
             "mode": "time",
@@ -286,71 +261,6 @@
               "show": true
             }
           ]
-        }
-      ],
-      "repeat": null,
-      "repeatIteration": null,
-      "repeatRowId": null,
-      "showTitle": false,
-      "title": "Dashboard Row",
-      "titleSize": "h6"
-    },
-    {
-      "collapse": false,
-      "height": 250,
-      "panels": [
-        {
-          "columns": [
-            {
-              "text": "Current",
-              "value": "current"
-            }
-          ],
-          "fontSize": "100%",
-          "height": "500",
-          "id": 4,
-          "links": [],
-          "pageSize": null,
-          "scroll": true,
-          "showHeader": true,
-          "sort": {
-            "col": 0,
-            "desc": true
-          },
-          "span": 2,
-          "styles": [
-            {
-              "dateFormat": "YYYY-MM-DD HH:mm:ss",
-              "pattern": "Time",
-              "type": "date"
-            },
-            {
-              "colorMode": null,
-              "colors": [
-                "rgba(245, 54, 54, 0.9)",
-                "rgba(237, 129, 40, 0.89)",
-                "rgba(50, 172, 45, 0.97)"
-              ],
-              "decimals": 2,
-              "pattern": "/.*/",
-              "thresholds": [],
-              "type": "number",
-              "unit": "short"
-            }
-          ],
-          "targets": [
-            {
-              "expr": "rpc_acceptor_connected{group=\"\"}",
-              "intervalFactor": 2,
-              "legendFormat": "{{job}}",
-              "metric": "rpc_acceptor_connected",
-              "refId": "A",
-              "step": 30
-            }
-          ],
-          "title": "Acceptor Connected",
-          "transform": "timeseries_aggregations",
-          "type": "table"
         }
       ],
       "repeat": null,
@@ -397,6 +307,6 @@
     ]
   },
   "timezone": "browser",
-  "title": "Reporter",
-  "version": 6
+  "title": "Mid",
+  "version": 25
 }
